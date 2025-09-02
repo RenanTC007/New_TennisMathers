@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cgnxaq4bqip32" path="res://scenes/bola.tscn" id="1_l2jkg"]
 [ext_resource type="PackedScene" uid="uid://dk0dbij27ectd" path="res://scenes/player1.tscn" id="2_tus0l"]
 [ext_resource type="PackedScene" uid="uid://hnvf1tnq75jv" path="res://scenes/player_2.tscn" id="3_85lif"]
-[ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/cenario.tscn" id="4_vm3cd"]
+[ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="4_vm3cd"]
 
 [node name="mundo1" type="Node2D"]
 position = Vector2(0, -20)

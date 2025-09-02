@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b32f31pix8ir3"]
+
+[ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="1_k05ng"]
+[ext_resource type="PackedScene" uid="uid://dk0dbij27ectd" path="res://scenes/player1.tscn" id="2_0c0ry"]
+[ext_resource type="PackedScene" uid="uid://cgnxaq4bqip32" path="res://scenes/bola.tscn" id="3_4sjka"]
+[ext_resource type="Script" uid="uid://bk72gbufsmgwi" path="res://scenes/label.gd" id="4_ogo8m"]
+
+[node name="Jogo" type="Node2D"]
+
+[node name="Quadra" parent="." instance=ExtResource("1_k05ng")]
+
+[node name="Jogador" parent="." instance=ExtResource("2_0c0ry")]
+position = Vector2(5, -645)
+scale = Vector2(2, 2)
+
+[node name="Bola" parent="." instance=ExtResource("3_4sjka")]
+position = Vector2(421, 550)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 809.0
+offset_top = 1.0
+offset_right = 1105.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "ax²+bx+c"
+horizontal_alignment = 1
+script = ExtResource("4_ogo8m")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(962, 460)

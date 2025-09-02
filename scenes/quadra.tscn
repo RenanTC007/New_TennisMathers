@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw1h23s22yobx"]
+
+[ext_resource type="Texture2D" uid="uid://cr8dm64387dyq" path="res://sprites/fundo-de-quadra-de-tenis/malha.png" id="1_u43qq"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iuonw"]
+normal = Vector2(1, 0)
+distance = -1.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pwypw"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_twko4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_01s14"]
+normal = Vector2(0, 1)
+
+[node name="cenario" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(961.815, 459.952)
+scale = Vector2(1.93218, 1.64809)
+texture = ExtResource("1_u43qq")
+
+[node name="paredeEsquerda" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredeEsquerda"]
+position = Vector2(-1, 235)
+shape = SubResource("WorldBoundaryShape2D_iuonw")
+
+[node name="paredeDireita" type="StaticBody2D" parent="."]
+position = Vector2(106, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredeDireita"]
+position = Vector2(1815, 10)
+shape = SubResource("WorldBoundaryShape2D_pwypw")
+
+[node name="piso" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso"]
+position = Vector2(962, 915)
+shape = SubResource("WorldBoundaryShape2D_twko4")
+
+[node name="Teto" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teto"]
+position = Vector2(958, 4)
+shape = SubResource("WorldBoundaryShape2D_01s14")
