@@ -1,35 +1,35 @@
-extends RigidBody2D
-var start_x := 0.0
-var start_y := 0.0
-var a := -0.002  # Coeficiente da parábola (ajuste conforme necessário)
-var b := 0.0
-var c := 0.0
-var launched := false
-var cont:=0
-var x:=-1.0
+extends Node2D
 
-func _ready():
-	sleeping = true  # Bola começa "adormecida"
+# Coeficientes da função quadrática
+@export var a: float = -0.02
+@export var b: int = 0.0
+@export var c: int = 0.0
 
-func launch():
-	start_x = global_position.x
-	start_y = global_position.y
-	linear_velocity = Vector2(400, 0)  # velocidade inicial no eixo X
-	gravity_scale = 0
+# Velocidade no eixo X
+@export var speed: float = 130.0
+
+# Origem personalizada
+@export var origin: Vector2 = Vector2(960, 624)
+
+# Posição no "sistema de coordenadas matemático"
+var x_pos: float = 0.0
+var launched = false
+
+
+func launch() -> void:
 	launched = true
-	sleeping = false
 
-func _physics_process(delta):
-	a = 1
-	b = 0
-	c = 0
+func _process(delta: float) -> void:
 	if launched:
-		#print(abs(global_position.x - start_x))
-		var y = a*pow(x, 2)+b*x+c
+	# Avança no eixo X (sistema matemático)
+		x_pos += speed * delta
+		# Calcula Y pela função quadrática
+		var y_math = a * pow(x_pos, 2) + b * x_pos + c
+
 		
-		#print("x:", x)
-		#print("y",position.y)
+		# Converte para coordenadas de tela
+		var screen_x = origin.x + x_pos*1.16483516 #diferença que tem de um eixo p o outro
+		var screen_y = origin.y - y_math  # inverte porque no Godot o Y cresce para baixo
 		
-		
-		position.y = start_y-y
-		x+=0.5
+		# Atualiza posição da bola
+		position = Vector2(screen_x, screen_y)

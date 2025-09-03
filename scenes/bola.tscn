@@ -10,8 +10,10 @@ bounce = 0.8
 script = SubResource("GDScript_8rvdd")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t7d5g"]
+radius = 21.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6ycda"]
+radius = 5.8
 
 [node name="bola" type="RigidBody2D" groups=["bola"]]
 collision_layer = 4
@@ -25,14 +27,14 @@ script = ExtResource("1_6ycda")
 shape = SubResource("CircleShape2D_t7d5g")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(-1.71661e-05, 0.999987)
-scale = Vector2(0.25, 0.25)
+position = Vector2(-0.999996, 0)
+scale = Vector2(0.159167, 0.159167)
 texture = ExtResource("2_ye40b")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -4)
+position = Vector2(-0.999985, -3)
 scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_6ycda")
 
