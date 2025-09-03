@@ -16,8 +16,8 @@ radius = 21.0
 radius = 5.8
 
 [node name="bola" type="RigidBody2D" groups=["bola"]]
-collision_layer = 4
-collision_mask = 33
+collision_layer = 5
+collision_mask = 37
 mass = 0.001
 physics_material_override = SubResource("PhysicsMaterial_l11qx")
 gravity_scale = 0.0

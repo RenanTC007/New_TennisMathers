@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh8suwtxc1frp"]
+
+[ext_resource type="Script" uid="uid://bguifyy8pr7xl" path="res://scripts/target.gd" id="1_b5a2r"]
+[ext_resource type="Texture2D" uid="uid://chehx0n513j8b" path="res://assets/sprites/greendot.png" id="1_b37e2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nlbrr"]
+radius = 496.98
+
+[node name="Target" type="Area2D"]
+collision_layer = 12
+collision_mask = 4
+script = ExtResource("1_b5a2r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b37e2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nlbrr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
