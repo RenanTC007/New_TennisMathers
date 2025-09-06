@@ -1,19 +1,74 @@
 [gd_scene load_steps=7 format=3 uid="uid://b32f31pix8ir3"]
 
 [ext_resource type="PackedScene" uid="uid://dh8suwtxc1frp" path="res://scenes/target.tscn" id="1_0c0ry"]
-[ext_resource type="Script" uid="uid://c10kf6f8lr11b" path="res://scenes/score.gd" id="1_4sjka"]
+[ext_resource type="Script" uid="uid://c10kf6f8lr11b" path="res://scripts/score.gd" id="1_4sjka"]
 [ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="1_k05ng"]
+[ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/coefficient.gd" id="1_ogo8m"]
 [ext_resource type="PackedScene" uid="uid://dk0dbij27ectd" path="res://scenes/player1.tscn" id="2_0c0ry"]
 [ext_resource type="PackedScene" uid="uid://cgnxaq4bqip32" path="res://scenes/bola.tscn" id="3_4sjka"]
-[ext_resource type="Script" uid="uid://bk72gbufsmgwi" path="res://scripts/function.gd" id="4_ogo8m"]
 
 [node name="Jogo" type="Node2D"]
 
+[node name="CoefficientA" type="LineEdit" parent="."]
+offset_left = 264.0
+offset_top = 8.0
+offset_right = 460.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "a"
+script = ExtResource("1_ogo8m")
+variable_name = "CoefficientA"
+
+[node name="CoefficientB" type="LineEdit" parent="."]
+offset_left = 561.0
+offset_top = 8.0
+offset_right = 757.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "b"
+context_menu_enabled = false
+emoji_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+script = ExtResource("1_ogo8m")
+variable_name = "CoefficientB"
+
+[node name="CoefficientC" type="LineEdit" parent="."]
+offset_left = 841.0
+offset_top = 8.0
+offset_right = 1037.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "c"
+script = ExtResource("1_ogo8m")
+variable_name = "CoefficientC"
+
+[node name="Score3" type="Label" parent="."]
+offset_left = 763.0
+offset_top = 8.0
+offset_right = 834.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 50
+text = "x +"
+
+[node name="Score2" type="Label" parent="."]
+offset_left = 466.0
+offset_top = 8.0
+offset_right = 554.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 50
+text = "x² +"
+
 [node name="Score" type="Label" parent="."]
-offset_left = 1035.0
-offset_top = 7.0
-offset_right = 1332.0
-offset_bottom = 86.0
+visible = false
+offset_left = 1190.0
+offset_top = 11.0
+offset_right = 1486.0
+offset_bottom = 85.0
 theme_override_font_sizes/font_size = 50
 text = "Placar"
 horizontal_alignment = 1
@@ -46,18 +101,10 @@ position = Vector2(498, 424)
 collision_layer = 4
 collision_mask = 33
 
-[node name="Function" type="Label" parent="."]
-offset_left = 520.0
-offset_top = 10.0
-offset_right = 816.0
-offset_bottom = 84.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 50
-text = "Função"
-horizontal_alignment = 1
-script = ExtResource("4_ogo8m")
-
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(827, 506)
 
+[connection signal="text_submitted" from="CoefficientA" to="CoefficientA" method="_on_text_submitted"]
+[connection signal="text_submitted" from="CoefficientB" to="CoefficientA" method="_on_coefficient_b_text_submitted"]
+[connection signal="text_submitted" from="CoefficientC" to="CoefficientC" method="_on_text_submitted"]
 [connection signal="area_entered" from="Target" to="Target" method="_on_area_entered"]

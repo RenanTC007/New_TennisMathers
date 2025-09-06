@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TennisMathers"
-run/main_scene="uid://bbfrhtvu4ixvn"
+run/main_scene="uid://b32f31pix8ir3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/fullsize=false
 config/icon="res://assets/sprites/Sprites gerais/icon.svg"

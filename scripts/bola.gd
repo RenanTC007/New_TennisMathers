@@ -13,7 +13,7 @@ var originY = 506.0
 func launch() -> void:
 	launched = true
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if global_position.x >= 1482.0:
 		launched = false
 		linear_velocity.x = 0.0
