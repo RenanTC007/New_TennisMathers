@@ -1,9 +1,9 @@
 extends RigidBody2D
 
 # Coeficientes da função quadrática
-@export var a: int = -1
-@export var b: int = 2
-@export var c: int = 10
+@export var a: int = 0
+@export var b: int = 0
+@export var c: int = 0
 
 var launched = false
 var originX = 744.0
@@ -14,6 +14,11 @@ func launch() -> void:
 	launched = true
 
 func _physics_process(delta: float) -> void:
+	if global_position.x >= 1482.0:
+		launched = false
+		linear_velocity.x = 0.0
+		position = Vector2(originX, originY)
+		
 	if launched:
 		linear_velocity.x = 200.0
 		var x = (global_position.x - originX) / (82.0)

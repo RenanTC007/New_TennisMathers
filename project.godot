@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/fullsize=false
 config/icon="res://assets/sprites/Sprites gerais/icon.svg"
 
+[autoload]
+
+Global="*res://scripts/Global.gd"
+
 [display]
 
 window/size/viewport_width=1920

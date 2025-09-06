@@ -34,7 +34,7 @@ shape = SubResource("WorldBoundaryShape2D_iuonw")
 position = Vector2(106, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredeDireita"]
-position = Vector2(1383, 355)
+position = Vector2(1482, 412)
 shape = SubResource("WorldBoundaryShape2D_pwypw")
 
 [node name="piso" type="StaticBody2D" parent="."]

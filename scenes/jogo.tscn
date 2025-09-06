@@ -1,28 +1,38 @@
-[gd_scene load_steps=6 format=3 uid="uid://b32f31pix8ir3"]
+[gd_scene load_steps=7 format=3 uid="uid://b32f31pix8ir3"]
 
 [ext_resource type="PackedScene" uid="uid://dh8suwtxc1frp" path="res://scenes/target.tscn" id="1_0c0ry"]
+[ext_resource type="Script" uid="uid://c10kf6f8lr11b" path="res://scenes/score.gd" id="1_4sjka"]
 [ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="1_k05ng"]
 [ext_resource type="PackedScene" uid="uid://dk0dbij27ectd" path="res://scenes/player1.tscn" id="2_0c0ry"]
 [ext_resource type="PackedScene" uid="uid://cgnxaq4bqip32" path="res://scenes/bola.tscn" id="3_4sjka"]
-[ext_resource type="Script" uid="uid://bk72gbufsmgwi" path="res://scripts/function_label.gd" id="4_ogo8m"]
+[ext_resource type="Script" uid="uid://bk72gbufsmgwi" path="res://scripts/function.gd" id="4_ogo8m"]
 
 [node name="Jogo" type="Node2D"]
 
+[node name="Score" type="Label" parent="."]
+offset_left = 1035.0
+offset_top = 7.0
+offset_right = 1332.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 50
+text = "Placar"
+horizontal_alignment = 1
+script = ExtResource("1_4sjka")
+
 [node name="Target3" parent="." instance=ExtResource("1_0c0ry")]
 z_index = 1
-position = Vector2(1122, 755)
+position = Vector2(1118, 511)
 scale = Vector2(0.1, 0.1)
 
 [node name="Target2" parent="." instance=ExtResource("1_0c0ry")]
 z_index = 1
-position = Vector2(1343, 456)
+position = Vector2(1326, 504)
 scale = Vector2(0.1, 0.1)
 
 [node name="Target" parent="." instance=ExtResource("1_0c0ry")]
 z_index = 1
-position = Vector2(961, 544)
+position = Vector2(963, 514)
 scale = Vector2(0.1, 0.1)
-collision_layer = 1
 
 [node name="Quadra" parent="." instance=ExtResource("1_k05ng")]
 position = Vector2(-2, 94)
@@ -36,14 +46,14 @@ position = Vector2(498, 424)
 collision_layer = 4
 collision_mask = 33
 
-[node name="FunctionLabel" type="Label" parent="."]
+[node name="Function" type="Label" parent="."]
 offset_left = 520.0
 offset_top = 10.0
 offset_right = 816.0
 offset_bottom = 84.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
-text = "Placar...sla"
+text = "Função"
 horizontal_alignment = 1
 script = ExtResource("4_ogo8m")
 
