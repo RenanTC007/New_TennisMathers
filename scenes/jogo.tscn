@@ -32,7 +32,7 @@ position = Vector2(5, -715)
 scale = Vector2(2, 2)
 
 [node name="Bola" parent="." instance=ExtResource("3_4sjka")]
-position = Vector2(421, 480)
+position = Vector2(498, 424)
 collision_layer = 4
 collision_mask = 33
 
@@ -48,6 +48,6 @@ horizontal_alignment = 1
 script = ExtResource("4_ogo8m")
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(745, 424)
+position = Vector2(827, 506)
 
 [connection signal="area_entered" from="Target" to="Target" method="_on_area_entered"]
