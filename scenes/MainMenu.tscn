@@ -1,8 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbfrhtvu4ixvn"]
+[gd_scene load_steps=16 format=3 uid="uid://bbfrhtvu4ixvn"]
 
 [ext_resource type="Script" uid="uid://cvf8v6ra77syx" path="res://scripts/main_menu.gd" id="1_yqorp"]
 [ext_resource type="Theme" uid="uid://ej4cdtehivmc" path="res://assets/theme/default.tres" id="2_0ykhv"]
 [ext_resource type="Texture2D" uid="uid://domyayq10gcdh" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Panel/Header.png" id="3_2wh52"]
+[ext_resource type="Script" uid="uid://b4hcor0i76ios" path="res://scenes/som.gd" id="5_826wr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l72w3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ucygd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mipys"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8a8k8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7la6k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nypq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bky6r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4mxc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5faoh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ptake"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_826wr"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -13,7 +36,7 @@ offset_right = -249.0
 offset_bottom = -357.0
 script = ExtResource("1_yqorp")
 
-[node name="Header" type="Sprite2D" parent="."]
+[node name="Fundo" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(1205, 893.5)
 scale = Vector2(3.38667, 13.9125)
@@ -26,7 +49,7 @@ offset_top = 427.0
 offset_right = 1689.0
 offset_bottom = 592.0
 theme_override_font_sizes/font_size = 120
-text = "Tennis Mathers?"
+text = "Tennis Mathers"
 uppercase = true
 
 [node name="Jogar" type="Button" parent="."]
@@ -58,3 +81,22 @@ offset_bottom = 1243.0
 theme = ExtResource("2_0ykhv")
 theme_override_font_sizes/font_size = 50
 text = "Sair"
+
+[node name="Som" type="Button" parent="."]
+layout_mode = 0
+offset_left = 271.0
+offset_top = 1282.0
+offset_right = 292.0
+offset_bottom = 1295.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_l72w3")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_ucygd")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mipys")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_8a8k8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7la6k")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2nypq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bky6r")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_l4mxc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5faoh")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ptake")
+theme_override_styles/normal = SubResource("StyleBoxTexture_826wr")
+script = ExtResource("5_826wr")

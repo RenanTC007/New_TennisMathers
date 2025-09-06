@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6oiglnbfoxik"]
+
+[ext_resource type="AudioStream" uid="uid://djy4iabbpyxr4" path="res://assets/Sons/musicaTennisMasters.mp3" id="1_3aqtm"]
+
+[node name="AudioJogo" type="Node2D"]
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_3aqtm")
+autoplay = true
+parameters/looping = true
