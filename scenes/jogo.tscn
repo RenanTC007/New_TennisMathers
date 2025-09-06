@@ -48,6 +48,6 @@ horizontal_alignment = 1
 script = ExtResource("4_ogo8m")
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(744, 506)
+position = Vector2(745, 424)
 
 [connection signal="area_entered" from="Target" to="Target" method="_on_area_entered"]

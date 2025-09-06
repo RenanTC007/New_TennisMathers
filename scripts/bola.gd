@@ -15,6 +15,6 @@ func launch() -> void:
 func _physics_process(delta: float) -> void:
 	if launched:
 		linear_velocity.x = 200.0
-		var x = (global_position.x - originX) / (22.50)
-		position.y = ((a*pow(x,2)+b*x+c) * 22.50)*(-1) + originY
+		var x = (global_position.x - originX) / (41.0)
+		position.y = ((a*pow(x,2)+b*x+c) * 82.0)*(-1) + originY
 		print(position)
