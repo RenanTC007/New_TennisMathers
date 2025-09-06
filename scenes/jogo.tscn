@@ -4,57 +4,50 @@
 [ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="1_k05ng"]
 [ext_resource type="PackedScene" uid="uid://dk0dbij27ectd" path="res://scenes/player1.tscn" id="2_0c0ry"]
 [ext_resource type="PackedScene" uid="uid://cgnxaq4bqip32" path="res://scenes/bola.tscn" id="3_4sjka"]
-[ext_resource type="Script" uid="uid://bk72gbufsmgwi" path="res://scripts/functionLabel.gd" id="4_ogo8m"]
+[ext_resource type="Script" uid="uid://bk72gbufsmgwi" path="res://scripts/function_label.gd" id="4_ogo8m"]
 
 [node name="Jogo" type="Node2D"]
 
 [node name="Target3" parent="." instance=ExtResource("1_0c0ry")]
-position = Vector2(1122, 825)
+z_index = 1
+position = Vector2(1122, 755)
 scale = Vector2(0.1, 0.1)
 
 [node name="Target2" parent="." instance=ExtResource("1_0c0ry")]
 z_index = 1
-position = Vector2(1343, 526)
+position = Vector2(1343, 456)
 scale = Vector2(0.1, 0.1)
 
 [node name="Target" parent="." instance=ExtResource("1_0c0ry")]
 z_index = 1
-position = Vector2(961, 614)
+position = Vector2(961, 544)
 scale = Vector2(0.1, 0.1)
 collision_layer = 1
 
 [node name="Quadra" parent="." instance=ExtResource("1_k05ng")]
-visible = false
-position = Vector2(-2, 164)
+position = Vector2(-2, 94)
 
 [node name="Jogador" parent="." instance=ExtResource("2_0c0ry")]
-visible = false
-position = Vector2(5, -645)
+position = Vector2(5, -715)
 scale = Vector2(2, 2)
 
 [node name="Bola" parent="." instance=ExtResource("3_4sjka")]
-position = Vector2(421, 550)
+position = Vector2(421, 480)
 collision_layer = 4
 collision_mask = 33
 
 [node name="FunctionLabel" type="Label" parent="."]
-offset_left = 809.0
-offset_top = 1.0
-offset_right = 1105.0
-offset_bottom = 152.0
+offset_left = 520.0
+offset_top = 10.0
+offset_right = 816.0
+offset_bottom = 84.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "Placar...sla"
 horizontal_alignment = 1
 script = ExtResource("4_ogo8m")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(960, 715)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(960, 624)
-
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(961, 460)
+position = Vector2(744, 506)
 
 [connection signal="area_entered" from="Target" to="Target" method="_on_area_entered"]
