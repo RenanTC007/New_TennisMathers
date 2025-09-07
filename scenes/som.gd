@@ -11,7 +11,7 @@ func _ready():
 	size = Vector2(128, 128)
 
 func _pressed():
-	# alterna entre os dois PNGs
+
 	if icon == img_normal:
 		icon = img_pressed
 		audio.stop()
