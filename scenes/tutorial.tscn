@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqhd8aq3ivxg"]
+
+[ext_resource type="Texture2D" uid="uid://bh5hfoibnah80" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@3x/Panel/Header@3x.png" id="1_8ho6b"]
+[ext_resource type="Texture2D" uid="uid://xg5aiot2b0p3" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Panel/Window/Big@2x.png" id="2_ph3nu"]
+[ext_resource type="Texture2D" uid="uid://djiyikahwo0kt" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/ProgressBar/Line@2x.png" id="3_4kmhl"]
+[ext_resource type="Texture2D" uid="uid://bgj3joj47i36j" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Buttons/Square-Medium/ArrowLeft/Default@2x.png" id="4_4kmhl"]
+[ext_resource type="Script" uid="uid://dg3d8r4el34rg" path="res://scenes/voltar.gd" id="4_cq4me"]
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(941, 548)
+scale = Vector2(1.15255, 5.09583)
+texture = ExtResource("1_8ho6b")
+
+[node name="Big_2x" type="Sprite2D" parent="."]
+position = Vector2(997.5, 515)
+scale = Vector2(0.890625, 0.943627)
+texture = ExtResource("2_ph3nu")
+
+[node name="Line_2x" type="Sprite2D" parent="Big_2x"]
+position = Vector2(0.499969, -261.135)
+scale = Vector2(1.34251, 3.57143)
+texture = ExtResource("3_4kmhl")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 750.5
+offset_top = 183.0
+offset_right = 1350.5
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 80
+text = "Como Jogar?"
+
+[node name="Voltar" type="Button" parent="."]
+offset_left = 81.0
+offset_top = 55.0
+offset_right = 169.0
+offset_bottom = 149.0
+script = ExtResource("4_cq4me")
+
+[node name="IconeVoltar" type="Sprite2D" parent="."]
+position = Vector2(125, 108)
+scale = Vector2(0.639205, 0.684659)
+texture = ExtResource("4_4kmhl")
