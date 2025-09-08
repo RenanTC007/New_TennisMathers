@@ -21,5 +21,5 @@ func _ready() -> void:
 func _on_body_entered(_body: Node2D) -> void:
 	Global.score += 1	
 	$"../Score".text = str(Global.score)
-	Global.qtd_alvos-=1
+	Global.qtd_alvos -= 1
 	queue_free()

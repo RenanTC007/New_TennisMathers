@@ -20,6 +20,6 @@ func _physics_process(_delta: float) -> void:
 		position = Vector2(originX, originY)
 		
 	if launched:
-		linear_velocity.x = 200.0
+		linear_velocity.x = 300.0
 		var x = (global_position.x - originX) / (82.0)
 		position.y = ((a*pow(x,2)+b*x+c) * 82.0)*(-1) + originY
