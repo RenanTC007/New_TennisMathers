@@ -3,6 +3,8 @@ extends Node
 
 var score := 0
 
+var time := 59
+
 var posicoes_x = []
 
 var qtd_alvos := 0

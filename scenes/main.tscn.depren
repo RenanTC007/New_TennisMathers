@@ -1,0 +1,201 @@
+[gd_scene load_steps=15 format=3 uid="uid://b32f31pix8ir3"]
+
+[ext_resource type="Script" uid="uid://chyfy2x23dpk" path="res://scripts/main.gd" id="1_trceg"]
+[ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/coefficient.gd" id="2_a8y0u"]
+[ext_resource type="Script" uid="uid://dfk3q75enh0id" path="res://game_manager.gd" id="2_trceg"]
+[ext_resource type="PackedScene" uid="uid://dh8suwtxc1frp" path="res://scenes/target.tscn" id="4_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="5_muem4"]
+[ext_resource type="PackedScene" uid="uid://dk0dbij27ectd" path="res://scenes/player1.tscn" id="6_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://cgnxaq4bqip32" path="res://scenes/bola.tscn" id="7_0ld40"]
+[ext_resource type="Texture2D" uid="uid://xg5aiot2b0p3" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Panel/Window/Big@2x.png" id="8_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://djiyikahwo0kt" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/ProgressBar/Line@2x.png" id="9_yc10j"]
+[ext_resource type="Script" uid="uid://bhdu10tvwq3fu" path="res://scripts/topo.gd" id="10_jscy8"]
+[ext_resource type="Texture2D" uid="uid://cn23f3fubgcxj" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/ArrowRight/Default.png" id="11_pm3ni"]
+[ext_resource type="Script" uid="uid://brxi2xgyrncua" path="res://scripts/avancar.gd" id="12_y6deb"]
+
+[sub_resource type="GDScript" id="GDScript_eb6dy"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3sjr"]
+texture = ExtResource("11_pm3ni")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_trceg")
+
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("2_trceg")
+
+[node name="CoefficientA" type="LineEdit" parent="."]
+offset_left = 349.0
+offset_top = 8.0
+offset_right = 545.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "a"
+script = ExtResource("2_a8y0u")
+variable_name = "CoefficientA"
+
+[node name="CoefficientB" type="LineEdit" parent="."]
+offset_left = 646.0
+offset_top = 8.0
+offset_right = 842.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "b"
+context_menu_enabled = false
+emoji_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+script = ExtResource("2_a8y0u")
+variable_name = "CoefficientB"
+
+[node name="CoefficientC" type="LineEdit" parent="."]
+offset_left = 926.0
+offset_top = 8.0
+offset_right = 1122.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "c"
+script = ExtResource("2_a8y0u")
+variable_name = "CoefficientC"
+
+[node name="stTerm" type="Label" parent="."]
+offset_left = 848.0
+offset_top = 8.0
+offset_right = 919.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 50
+text = "x +"
+
+[node name="ndTerm" type="Label" parent="."]
+offset_left = 551.0
+offset_top = 8.0
+offset_right = 639.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 50
+text = "x² +"
+
+[node name="Score" type="Label" parent="."]
+offset_left = 1934.0
+offset_top = -97.0
+offset_right = 2230.0
+offset_bottom = -23.0
+theme_override_font_sizes/font_size = 50
+text = "Placar"
+horizontal_alignment = 1
+script = SubResource("GDScript_eb6dy")
+theme_override_font_sizes/font_size = 50
+
+[node name="Time" type="Label" parent="."]
+offset_left = 81.0
+offset_top = 11.0
+offset_right = 377.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+text = "Tempo"
+
+[node name="Target" parent="." instance=ExtResource("4_jbj1t")]
+z_index = 1
+position = Vector2(963, 514)
+scale = Vector2(0.1, 0.1)
+
+[node name="Quadra" parent="." instance=ExtResource("5_muem4")]
+position = Vector2(-2, 94)
+
+[node name="Jogador" parent="." instance=ExtResource("6_dp3eg")]
+position = Vector2(5, -715)
+scale = Vector2(2, 2)
+
+[node name="Bola" parent="." instance=ExtResource("7_0ld40")]
+position = Vector2(498, 424)
+collision_layer = 4
+collision_mask = 33
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(231, -35)
+
+[node name="Canvada" type="CanvasLayer" parent="."]
+
+[node name="Painel" type="Panel" parent="Canvada"]
+process_mode = 3
+visible = false
+offset_left = 502.0
+offset_top = 217.0
+offset_right = 1437.0
+offset_bottom = 796.0
+
+[node name="Big_2x" type="Sprite2D" parent="Canvada/Painel"]
+position = Vector2(461.5, 329.5)
+scale = Vector2(0.890625, 0.881127)
+texture = ExtResource("8_gqmmt")
+
+[node name="Line_2x" type="Sprite2D" parent="Canvada/Painel"]
+position = Vector2(460, 57.5859)
+scale = Vector2(1.20705, 3.3701)
+texture = ExtResource("9_yc10j")
+
+[node name="Topo" type="Label" parent="Canvada/Painel"]
+layout_mode = 0
+offset_left = 102.5
+offset_top = -28.0002
+offset_right = 853.5
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 80
+text = "Rodada x Encerrada"
+script = ExtResource("10_jscy8")
+
+[node name="Texto" type="Label" parent="Canvada/Painel"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 161.0
+offset_right = 603.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 70
+text = "Texto..sla"
+
+[node name="Avancar" type="Button" parent="Canvada/Painel"]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 508.0
+offset_right = 585.0
+offset_bottom = 699.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_k3sjr")
+script = ExtResource("12_y6deb")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Rodada" type="Label" parent="."]
+offset_left = 1095.0
+offset_top = 11.0
+offset_right = 1391.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+text = "Rodada"
+horizontal_alignment = 2
+
+[connection signal="text_submitted" from="CoefficientA" to="CoefficientA" method="_on_text_submitted"]
+[connection signal="text_submitted" from="CoefficientB" to="CoefficientA" method="_on_coefficient_b_text_submitted"]
+[connection signal="text_submitted" from="CoefficientC" to="CoefficientC" method="_on_text_submitted"]
+[connection signal="area_entered" from="Target" to="Target" method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="GameManager" method="_on_timer_timeout"]

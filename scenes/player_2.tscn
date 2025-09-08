@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://hnvf1tnq75jv"]
+[gd_scene load_steps=23 format=3 uid="uid://dl86l1h15pt30"]
 
-[ext_resource type="Script" path="res://scripts/player2.gd" id="1_ufh5k"]
+[ext_resource type="Script" uid="uid://dvi7wvg1ixuso" path="res://scripts/player2.gd" id="1_ufh5k"]
 [ext_resource type="Texture2D" uid="uid://ck1ikfwuqbsa0" path="res://assets/sprites/Sprite Pack 7/3 - Gordon/Running (48 x 48).png" id="2_x3sgo"]
 [ext_resource type="Texture2D" uid="uid://bkbhaanplpom0" path="res://assets/sprites/Sprite Pack 7/3 - Gordon/Blink (48 x 48).png" id="3_ryqyf"]
 [ext_resource type="Texture2D" uid="uid://btpjl2lyeef27" path="res://assets/sprites/Sprite Pack 7/3 - Gordon/Down_swing (80 x 64).png" id="4_ryqyf"]
