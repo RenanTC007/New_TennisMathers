@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cvf8v6ra77syx" path="res://scripts/main_menu.gd" id="1_yqorp"]
 [ext_resource type="Theme" uid="uid://ej4cdtehivmc" path="res://assets/theme/default.tres" id="2_0ykhv"]
 [ext_resource type="Texture2D" uid="uid://bh5hfoibnah80" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@3x/Panel/Header@3x.png" id="2_ow34m"]
-[ext_resource type="Script" uid="uid://b4hcor0i76ios" path="res://scenes/som.gd" id="5_826wr"]
+[ext_resource type="Script" uid="uid://b4hcor0i76ios" path="res://scripts/som.gd" id="5_826wr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l72w3"]
 
