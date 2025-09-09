@@ -10,7 +10,6 @@ var x
 
 
 #@onready var ballon = get_node("res://bola.tscn")
-@onready var animation := $AnimatedSprite2D
 @onready var animator := $AnimationPlayer
 var direction_horizontal
 var direction_vertical

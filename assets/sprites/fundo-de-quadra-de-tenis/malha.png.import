@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c31nsras8jgp1"
-path="res://.godot/imported/tennis_court_background.jpg-7c0b07b5f19198add4118c6d25f9c660.ctex"
+uid="uid://cr8dm64387dyq"
+path="res://.godot/imported/malha.png-7c885b23e8c994d8ee25da1d6a46b981.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/fundo-de-quadra-de-tenis/tennis_court_background.jpg"
-dest_files=["res://.godot/imported/tennis_court_background.jpg-7c0b07b5f19198add4118c6d25f9c660.ctex"]
+source_file="res://assets/sprites/fundo-de-quadra-de-tenis/malha.png"
+dest_files=["res://.godot/imported/malha.png-7c885b23e8c994d8ee25da1d6a46b981.ctex"]
 
 [params]
 

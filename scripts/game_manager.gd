@@ -3,7 +3,7 @@ extends Node2D
 
 func _ready() -> void:
 	#Rodada
-	$"../Rodada".text = "Rodada " + str(Global.rodada_atual)
+	$"../UI/Rodada".text = "Rodada " + str(Global.rodada_atual)
 	
 	#Tempo
 	_on_timer_timeout()
@@ -11,7 +11,7 @@ func _ready() -> void:
 
 	
 	#Pontuação
-	$"../Score".text = str(Global.score)
+	$"../UI/Score".text = str(Global.score)
 
 
 func _process(delta: float) -> void:
@@ -22,14 +22,14 @@ func _process(delta: float) -> void:
 		
 		
 func mostrar_popup_vitoria():
-	$"../CanvaVitoria/PainelVitoria".visible = true
+	$"../CanvasLayer/CanvaVitoria/PainelVitoria".visible = true
 	get_tree().paused = true 
 	
 	
 func _on_timer_timeout() -> void:
-	$"../Time".text = str(Global.time)
+	$"../UI/Time".text = str(Global.time)
 	Global.time -= 1
 
 func mostrar_popup_derrota():
-	$"../CanvaDerrota/PainelDerrota".visible = true
+	$"../CanvasLayer/CanvaDerrota/PainelDerrota".visible = true
 	get_tree().paused = true 

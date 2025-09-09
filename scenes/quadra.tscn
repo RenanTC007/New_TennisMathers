@@ -11,7 +11,7 @@ normal = Vector2(-1, 0)
 distance = -2.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_twko4"]
-distance = 135.0
+distance = 80.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_01s14"]
 normal = Vector2(0, 1)
@@ -28,14 +28,14 @@ texture = ExtResource("1_u43qq")
 [node name="paredeEsquerda" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredeEsquerda"]
-position = Vector2(-1, 235)
+position = Vector2(24, 235)
 shape = SubResource("WorldBoundaryShape2D_iuonw")
 
 [node name="paredeDireita" type="StaticBody2D" parent="."]
 position = Vector2(106, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredeDireita"]
-position = Vector2(1482, 412)
+position = Vector2(1652, 427)
 shape = SubResource("WorldBoundaryShape2D_pwypw")
 
 [node name="piso" type="StaticBody2D" parent="."]
@@ -47,5 +47,5 @@ shape = SubResource("WorldBoundaryShape2D_twko4")
 [node name="Teto" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teto"]
-position = Vector2(959, -2)
+position = Vector2(960, 164)
 shape = SubResource("WorldBoundaryShape2D_01s14")
