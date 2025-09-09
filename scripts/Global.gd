@@ -3,7 +3,7 @@ extends Node
 
 var score := 0
 
-var time := 59
+var time := 30	
 
 var posicoes_x = []
 

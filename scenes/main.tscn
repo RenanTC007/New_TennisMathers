@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b32f31pix8ir3"]
+[gd_scene load_steps=21 format=3 uid="uid://b32f31pix8ir3"]
 
 [ext_resource type="Script" uid="uid://chyfy2x23dpk" path="res://scripts/main.gd" id="1_trceg"]
 [ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/coefficient.gd" id="2_a8y0u"]
@@ -10,13 +10,23 @@
 [ext_resource type="Texture2D" uid="uid://xg5aiot2b0p3" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Panel/Window/Big@2x.png" id="8_gqmmt"]
 [ext_resource type="Texture2D" uid="uid://djiyikahwo0kt" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/ProgressBar/Line@2x.png" id="9_yc10j"]
 [ext_resource type="Script" uid="uid://bhdu10tvwq3fu" path="res://scripts/topo.gd" id="10_jscy8"]
-[ext_resource type="Texture2D" uid="uid://cn23f3fubgcxj" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/ArrowRight/Default.png" id="11_pm3ni"]
-[ext_resource type="Script" uid="uid://brxi2xgyrncua" path="res://scripts/avancar.gd" id="12_y6deb"]
+[ext_resource type="Texture2D" uid="uid://c17q4jgs7ml2g" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Repeat/Default.png" id="11_eb6dy"]
+[ext_resource type="Script" uid="uid://clkxyl2k2egia" path="res://scenes/avancar.gd" id="12_jbj1t"]
+[ext_resource type="Script" uid="uid://dxnstrcdo33lv" path="res://scenes/reiniciar.gd" id="13_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://ddd2du4k367yu" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Play/Default.png" id="13_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://bm8wdhi6ojpqo" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Home/Default.png" id="14_jkv2x"]
+[ext_resource type="Script" uid="uid://d1a62ext3uqbp" path="res://scenes/menu.gd" id="15_jkv2x"]
 
 [sub_resource type="GDScript" id="GDScript_eb6dy"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_muem4"]
+texture = ExtResource("13_jbj1t")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3sjr"]
-texture = ExtResource("11_pm3ni")
+texture = ExtResource("11_eb6dy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trceg"]
+texture = ExtResource("14_jkv2x")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_trceg")
@@ -116,9 +126,9 @@ collision_mask = 33
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(231, -35)
 
-[node name="Canvada" type="CanvasLayer" parent="."]
+[node name="CanvaVitoria" type="CanvasLayer" parent="."]
 
-[node name="Painel" type="Panel" parent="Canvada"]
+[node name="PainelVitoria" type="Panel" parent="CanvaVitoria"]
 process_mode = 3
 visible = false
 offset_left = 502.0
@@ -126,17 +136,74 @@ offset_top = 217.0
 offset_right = 1437.0
 offset_bottom = 796.0
 
-[node name="Big_2x" type="Sprite2D" parent="Canvada/Painel"]
+[node name="Big_2x" type="Sprite2D" parent="CanvaVitoria/PainelVitoria"]
 position = Vector2(461.5, 329.5)
 scale = Vector2(0.890625, 0.881127)
 texture = ExtResource("8_gqmmt")
 
-[node name="Line_2x" type="Sprite2D" parent="Canvada/Painel"]
+[node name="Line_2x" type="Sprite2D" parent="CanvaVitoria/PainelVitoria"]
 position = Vector2(460, 57.5859)
 scale = Vector2(1.20705, 3.3701)
 texture = ExtResource("9_yc10j")
 
-[node name="Topo" type="Label" parent="Canvada/Painel"]
+[node name="Topo" type="Label" parent="CanvaVitoria/PainelVitoria"]
+layout_mode = 0
+offset_left = 102.5
+offset_top = -28.0002
+offset_right = 853.5
+offset_bottom = 109.0
+theme_override_font_sizes/font_size = 80
+text = "Rodada x Concluída"
+script = ExtResource("10_jscy8")
+
+[node name="Texto" type="Label" parent="CanvaVitoria/PainelVitoria"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 161.0
+offset_right = 685.0
+offset_bottom = 257.0
+theme_override_font_sizes/font_size = 70
+text = "Texto..vitoria"
+
+[node name="Avancar" type="Button" parent="CanvaVitoria/PainelVitoria"]
+offset_left = 369.0
+offset_top = 501.0
+offset_right = 565.0
+offset_bottom = 680.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_muem4")
+script = ExtResource("12_jbj1t")
+
+[node name="CanvaDerrota" type="CanvasLayer" parent="."]
+
+[node name="PainelDerrota" type="Panel" parent="CanvaDerrota"]
+process_mode = 3
+visible = false
+offset_left = 502.0
+offset_top = 217.0
+offset_right = 1437.0
+offset_bottom = 796.0
+
+[node name="Big_2x" type="Sprite2D" parent="CanvaDerrota/PainelDerrota"]
+position = Vector2(461.5, 329.5)
+scale = Vector2(0.890625, 0.881127)
+texture = ExtResource("8_gqmmt")
+
+[node name="Line_2x" type="Sprite2D" parent="CanvaDerrota/PainelDerrota"]
+position = Vector2(460, 57.5859)
+scale = Vector2(1.20705, 3.3701)
+texture = ExtResource("9_yc10j")
+
+[node name="Topo" type="Label" parent="CanvaDerrota/PainelDerrota"]
 layout_mode = 0
 offset_left = 102.5
 offset_top = -28.0002
@@ -146,21 +213,21 @@ theme_override_font_sizes/font_size = 80
 text = "Rodada x Encerrada"
 script = ExtResource("10_jscy8")
 
-[node name="Texto" type="Label" parent="Canvada/Painel"]
+[node name="Texto" type="Label" parent="CanvaDerrota/PainelDerrota"]
 layout_mode = 0
-offset_left = 312.0
-offset_top = 161.0
-offset_right = 603.0
-offset_bottom = 257.0
+offset_left = 196.0
+offset_top = 151.0
+offset_right = 831.0
+offset_bottom = 247.0
 theme_override_font_sizes/font_size = 70
-text = "Texto..sla"
+text = "Texto para derrota"
 
-[node name="Avancar" type="Button" parent="Canvada/Painel"]
+[node name="Reiniciar" type="Button" parent="CanvaDerrota/PainelDerrota"]
 layout_mode = 0
-offset_left = 316.0
-offset_top = 508.0
-offset_right = 585.0
-offset_bottom = 699.0
+offset_left = 121.0
+offset_top = 539.0
+offset_right = 390.0
+offset_bottom = 730.0
 theme_override_styles/focus = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_k3sjr")
@@ -172,7 +239,27 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_k3sjr")
-script = ExtResource("12_y6deb")
+script = ExtResource("13_a8y0u")
+
+[node name="Menu" type="Button" parent="CanvaDerrota/PainelDerrota"]
+process_mode = 3
+layout_mode = 0
+offset_left = 563.0
+offset_top = 537.0
+offset_right = 814.0
+offset_bottom = 742.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_trceg")
+script = ExtResource("15_jkv2x")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
