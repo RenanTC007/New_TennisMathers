@@ -197,14 +197,6 @@ offset_right = 1061.0
 offset_bottom = 120.0
 theme_override_font_sizes/font_size = 50
 placeholder_text = "b"
-context_menu_enabled = false
-emoji_menu_enabled = false
-virtual_keyboard_enabled = false
-shortcut_keys_enabled = false
-middle_mouse_paste_enabled = false
-selecting_enabled = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
 script = ExtResource("2_a8y0u")
 variable_name = "CoefficientB"
 
@@ -309,7 +301,7 @@ region_enabled = true
 region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
 
 [connection signal="text_submitted" from="UI/CoefficientA" to="UI/CoefficientA" method="_on_text_submitted"]
-[connection signal="text_submitted" from="UI/CoefficientB" to="UI/CoefficientA" method="_on_coefficient_b_text_submitted"]
+[connection signal="text_submitted" from="UI/CoefficientB" to="UI/CoefficientB" method="_on_text_submitted"]
 [connection signal="text_submitted" from="UI/CoefficientC" to="UI/CoefficientC" method="_on_text_submitted"]
 [connection signal="area_entered" from="Entity/Target" to="Entity/Target" method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="GameManager" method="_on_timer_timeout"]

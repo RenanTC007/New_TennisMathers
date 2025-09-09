@@ -43,7 +43,7 @@ func _physics_process(_delta: float) -> void:
 func handle_animation():
 	var anim = "parado"
 	
-	if (direction_horizontal or direction_vertical) and is_on_floor():
+	if (direction_horizontal or direction_vertical):
 		anim = "andando"
 	
 	if is_tocando:
@@ -61,14 +61,3 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("bola"):
 		body.launch()
-		
-		
-	
-		#if body.has_method("apply_central_impulse"):
-			#body.apply_central_impulse(Vector2(0.4, -0.4))
-#func _anda_bola(delta: float, body) -> void:
-	#print("porra")
-	#print(delta)
-	#x = body.position.x
-	#body.position.y = -x*x
-	
