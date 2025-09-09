@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b32f31pix8ir3"]
+[gd_scene load_steps=23 format=3 uid="uid://b32f31pix8ir3"]
 
 [ext_resource type="Script" uid="uid://chyfy2x23dpk" path="res://scripts/main.gd" id="1_trceg"]
 [ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/coefficient.gd" id="2_a8y0u"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://ddd2du4k367yu" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Play/Default.png" id="13_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://bm8wdhi6ojpqo" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Home/Default.png" id="14_jkv2x"]
 [ext_resource type="Script" uid="uid://d1a62ext3uqbp" path="res://scenes/menu.gd" id="15_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://51q603aa2nio" path="res://assets/sprites/fundo azul.webp" id="17_muem4"]
+[ext_resource type="Texture2D" uid="uid://dm340p2yxib7k" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/@previews/Button.png" id="18_dp3eg"]
 
 [sub_resource type="GDScript" id="GDScript_eb6dy"]
 
@@ -31,24 +33,31 @@ texture = ExtResource("14_jkv2x")
 [node name="Main" type="Node2D"]
 script = ExtResource("1_trceg")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(954.75, 545)
+scale = Vector2(1.20812, 0.466587)
+texture = ExtResource("17_muem4")
+
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("2_trceg")
 
 [node name="CoefficientA" type="LineEdit" parent="."]
-offset_left = 349.0
-offset_top = 8.0
-offset_right = 545.0
-offset_bottom = 85.0
+offset_left = 568.0
+offset_top = 43.0
+offset_right = 764.0
+offset_bottom = 120.0
 theme_override_font_sizes/font_size = 50
 placeholder_text = "a"
 script = ExtResource("2_a8y0u")
 variable_name = "CoefficientA"
+metadata/_edit_use_anchors_ = true
 
 [node name="CoefficientB" type="LineEdit" parent="."]
-offset_left = 646.0
-offset_top = 8.0
-offset_right = 842.0
-offset_bottom = 85.0
+offset_left = 865.0
+offset_top = 43.0
+offset_right = 1061.0
+offset_bottom = 120.0
 theme_override_font_sizes/font_size = 50
 placeholder_text = "b"
 context_menu_enabled = false
@@ -61,32 +70,36 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 script = ExtResource("2_a8y0u")
 variable_name = "CoefficientB"
+metadata/_edit_use_anchors_ = true
 
 [node name="CoefficientC" type="LineEdit" parent="."]
-offset_left = 926.0
-offset_top = 8.0
-offset_right = 1122.0
-offset_bottom = 85.0
+offset_left = 1145.0
+offset_top = 43.0
+offset_right = 1341.0
+offset_bottom = 120.0
 theme_override_font_sizes/font_size = 50
 placeholder_text = "c"
 script = ExtResource("2_a8y0u")
 variable_name = "CoefficientC"
+metadata/_edit_use_anchors_ = true
 
 [node name="stTerm" type="Label" parent="."]
-offset_left = 848.0
-offset_top = 8.0
-offset_right = 919.0
-offset_bottom = 82.0
+offset_left = 1067.0
+offset_top = 43.0
+offset_right = 1138.0
+offset_bottom = 117.0
 theme_override_font_sizes/font_size = 50
 text = "x +"
+metadata/_edit_use_anchors_ = true
 
 [node name="ndTerm" type="Label" parent="."]
-offset_left = 551.0
-offset_top = 8.0
-offset_right = 639.0
-offset_bottom = 82.0
+offset_left = 770.0
+offset_top = 43.0
+offset_right = 858.0
+offset_bottom = 117.0
 theme_override_font_sizes/font_size = 50
 text = "x² +"
+metadata/_edit_use_anchors_ = true
 
 [node name="Score" type="Label" parent="."]
 offset_left = 1934.0
@@ -99,12 +112,13 @@ horizontal_alignment = 1
 script = SubResource("GDScript_eb6dy")
 
 [node name="Time" type="Label" parent="."]
-offset_left = 81.0
-offset_top = 11.0
-offset_right = 377.0
-offset_bottom = 85.0
+offset_left = 106.0
+offset_top = 73.0
+offset_right = 402.0
+offset_bottom = 147.0
 theme_override_font_sizes/font_size = 50
 text = "Tempo"
+metadata/_edit_use_anchors_ = true
 
 [node name="Target" parent="." instance=ExtResource("4_jbj1t")]
 z_index = 1
@@ -112,7 +126,7 @@ position = Vector2(963, 514)
 scale = Vector2(0.1, 0.1)
 
 [node name="Quadra" parent="." instance=ExtResource("5_muem4")]
-position = Vector2(-2, 94)
+position = Vector2(119, 150)
 
 [node name="Jogador" parent="." instance=ExtResource("6_dp3eg")]
 position = Vector2(5, -715)
@@ -122,9 +136,6 @@ scale = Vector2(2, 2)
 position = Vector2(498, 424)
 collision_layer = 4
 collision_mask = 33
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(231, -35)
 
 [node name="CanvaVitoria" type="CanvasLayer" parent="."]
 
@@ -166,6 +177,7 @@ theme_override_font_sizes/font_size = 70
 text = "Texto..vitoria"
 
 [node name="Avancar" type="Button" parent="CanvaVitoria/PainelVitoria"]
+layout_mode = 0
 offset_left = 369.0
 offset_top = 501.0
 offset_right = 565.0
@@ -265,13 +277,22 @@ script = ExtResource("15_jkv2x")
 autostart = true
 
 [node name="Rodada" type="Label" parent="."]
-offset_left = 1095.0
-offset_top = 11.0
-offset_right = 1391.0
-offset_bottom = 85.0
+offset_left = 1588.0
+offset_top = 35.0
+offset_right = 1884.0
+offset_bottom = 109.0
 theme_override_font_sizes/font_size = 50
 text = "Rodada"
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(133.75, 108.488)
+scale = Vector2(0.841014, 0.841014)
+texture = ExtResource("18_dp3eg")
+region_enabled = true
+region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
 
 [connection signal="text_submitted" from="CoefficientA" to="CoefficientA" method="_on_text_submitted"]
 [connection signal="text_submitted" from="CoefficientB" to="CoefficientA" method="_on_coefficient_b_text_submitted"]

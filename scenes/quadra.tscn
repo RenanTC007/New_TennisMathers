@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dw1h23s22yobx"]
 
-[ext_resource type="Texture2D" uid="uid://cr8dm64387dyq" path="res://sprites/fundo-de-quadra-de-tenis/malha.png" id="1_u43qq"]
+[ext_resource type="Texture2D" uid="uid://dgjcg25mpduwk" path="res://assets/sprites/quadraDoida.png" id="1_u43qq"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iuonw"]
 normal = Vector2(1, 0)
@@ -20,8 +20,9 @@ distance = -97.0
 [node name="cenario" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(746, 412)
-scale = Vector2(1.5002, 1.50021)
+texture_filter = 2
+position = Vector2(850, 472)
+scale = Vector2(2.76253, 2.76255)
 texture = ExtResource("1_u43qq")
 
 [node name="paredeEsquerda" type="StaticBody2D" parent="."]
