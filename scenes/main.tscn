@@ -73,7 +73,7 @@ offset_top = 161.0
 offset_right = 685.0
 offset_bottom = 257.0
 theme_override_font_sizes/font_size = 70
-text = "Texto..vitoria"
+text = "Você ganhou!"
 
 [node name="Avancar" type="Button" parent="CanvasLayer/CanvaVitoria/PainelVitoria"]
 layout_mode = 0
@@ -131,7 +131,7 @@ offset_top = 151.0
 offset_right = 831.0
 offset_bottom = 247.0
 theme_override_font_sizes/font_size = 70
-text = "Texto para derrota"
+text = "Você perdeu!"
 
 [node name="Reiniciar" type="Button" parent="CanvasLayer/CanvaDerrota/PainelDerrota"]
 layout_mode = 0
@@ -266,7 +266,6 @@ scale = Vector2(1.20812, 0.466587)
 [node name="BackgroundColor" type="Sprite2D" parent="Background"]
 z_index = -2
 position = Vector2(22.5557, -8.57289)
-scale = Vector2(1, 1)
 texture = ExtResource("17_muem4")
 
 [node name="Quadra" parent="Background" instance=ExtResource("5_muem4")]
