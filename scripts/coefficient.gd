@@ -7,12 +7,12 @@ extends LineEdit
 func _on_text_submitted(new_text: String):
 	if not bola.launched:
 		if (variable_name == "CoefficientA"):
-			bola.a = int(new_text)
+			bola.a = float(new_text)
 
 		elif (variable_name == "CoefficientB"):
-			bola.b = int(new_text)
+			bola.b = float(new_text)
 
 		elif (variable_name == "CoefficientC"):
-			bola.c = int(new_text)
+			bola.c = float(new_text)
 			
 	release_focus()

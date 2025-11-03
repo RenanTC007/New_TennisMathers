@@ -18,7 +18,7 @@ config/icon="res://assets/sprites/Sprites gerais/icon.svg"
 
 [autoload]
 
-Global="*res://scripts/Global.gd"
+Global="*res://scripts/globals/global.gd"
 AudioJogo="*res://scenes/audio_jogo.tscn"
 
 [display]
