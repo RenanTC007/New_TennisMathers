@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 	
 	#Pontuação
-	$"../UI/Score".text = str(Global.score)
+	$"../UI/Score".text = "0 / "+ str(clamp(Global.rodada_atual, 1, 10))
 
 
 func _process(_delta: float) -> void:
