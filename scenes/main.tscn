@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://b32f31pix8ir3"]
 
 [ext_resource type="Script" uid="uid://chyfy2x23dpk" path="res://scripts/main.gd" id="1_trceg"]
-[ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/coefficient.gd" id="2_a8y0u"]
+[ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/form.gd" id="2_a8y0u"]
 [ext_resource type="Script" uid="uid://dfk3q75enh0id" path="res://scripts/game_manager.gd" id="2_trceg"]
 [ext_resource type="PackedScene" uid="uid://dh8suwtxc1frp" path="res://scenes/target.tscn" id="4_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="5_muem4"]
@@ -259,6 +259,36 @@ text = "Rodada"
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
+[node name="stFunction" type="Label" parent="UI"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 42.399
+anchor_top = 7.832
+anchor_right = 42.399
+anchor_bottom = 7.832
+offset_left = -309.96
+offset_top = -212.28
+offset_right = -240.96
+offset_bottom = -143.28
+theme_override_font_sizes/font_size = 40
+text = "y ="
+
+[node name="ndFunction" type="Label" parent="UI"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 42.399
+anchor_top = 7.832
+anchor_right = 42.399
+anchor_bottom = 7.832
+offset_left = -309.96
+offset_top = -156.28
+offset_right = -228.96
+offset_bottom = -87.28
+theme_override_font_sizes/font_size = 40
+text = "y' ="
+
 [node name="Background" type="Node2D" parent="."]
 position = Vector2(954.75, 545)
 scale = Vector2(1.20812, 0.466587)
@@ -284,8 +314,9 @@ collision_layer = 4
 collision_mask = 33
 
 [node name="Target" parent="Entity" instance=ExtResource("4_jbj1t")]
+visible = false
 z_index = 1
-position = Vector2(1054, 539)
+position = Vector2(2291, 160)
 scale = Vector2(0.1, 0.1)
 
 [node name="Timer" type="Timer" parent="."]

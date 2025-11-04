@@ -1,10 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6oiglnbfoxik"]
+[gd_scene load_steps=4 format=3 uid="uid://b6oiglnbfoxik"]
 
-[ext_resource type="AudioStream" uid="uid://djy4iabbpyxr4" path="res://assets/Sons/musicaTennisMasters.mp3" id="1_3aqtm"]
+[ext_resource type="AudioStream" uid="uid://djy4iabbpyxr4" path="res://assets/sfx/musicaTennisMasters.mp3" id="1_3aqtm"]
+[ext_resource type="AudioStream" uid="uid://cr78omid28gpr" path="res://assets/sfx/correct.mp3" id="2_3222k"]
+[ext_resource type="AudioStream" uid="uid://yt81ikboe3pk" path="res://assets/sfx/wrong.mp3" id="3_3deb5"]
 
 [node name="AudioJogo" type="Node2D"]
 
-[node name="Audio" type="AudioStreamPlayer" parent="."]
+[node name="Menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_3aqtm")
 autoplay = true
 parameters/looping = true
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_3222k")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3deb5")
