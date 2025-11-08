@@ -81,17 +81,17 @@ offset_left = 369.0
 offset_top = 501.0
 offset_right = 565.0
 offset_bottom = 680.0
-theme_override_styles/focus = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/hover = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_muem4")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_muem4")
 theme_override_styles/normal = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_muem4")
+theme_override_styles/focus = SubResource("StyleBoxTexture_muem4")
 script = ExtResource("12_jbj1t")
 
 [node name="CanvaDerrota" type="CanvasLayer" parent="CanvasLayer"]
@@ -139,17 +139,17 @@ offset_left = 121.0
 offset_top = 539.0
 offset_right = 390.0
 offset_bottom = 730.0
-theme_override_styles/focus = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/hover = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_k3sjr")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_k3sjr")
+theme_override_styles/focus = SubResource("StyleBoxTexture_k3sjr")
 script = ExtResource("13_a8y0u")
 
 [node name="Menu" type="Button" parent="CanvasLayer/CanvaDerrota/PainelDerrota"]
@@ -159,17 +159,17 @@ offset_left = 563.0
 offset_top = 537.0
 offset_right = 814.0
 offset_bottom = 742.0
-theme_override_styles/focus = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/hover = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_trceg")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_trceg")
 theme_override_styles/normal = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_trceg")
 script = ExtResource("15_jkv2x")
 
 [node name="UI" type="Control" parent="."]
@@ -269,7 +269,6 @@ theme_override_font_sizes/font_size = 40
 text = "y' ="
 
 [node name="Background" type="Node2D" parent="."]
-visible = false
 position = Vector2(954.75, 545)
 scale = Vector2(1.20812, 0.466587)
 

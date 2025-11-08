@@ -1,31 +1,32 @@
-[gd_scene load_steps=16 format=3 uid="uid://bbfrhtvu4ixvn"]
+[gd_scene load_steps=17 format=3 uid="uid://bbfrhtvu4ixvn"]
 
 [ext_resource type="Script" uid="uid://cvf8v6ra77syx" path="res://scripts/main_menu.gd" id="1_yqorp"]
 [ext_resource type="Theme" uid="uid://ej4cdtehivmc" path="res://assets/theme/default.tres" id="2_0ykhv"]
 [ext_resource type="Texture2D" uid="uid://bh5hfoibnah80" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@3x/Panel/Header@3x.png" id="2_ow34m"]
 [ext_resource type="Script" uid="uid://b4hcor0i76ios" path="res://scripts/som.gd" id="5_826wr"]
+[ext_resource type="Texture2D" uid="uid://c6vg4tlmc126t" path="res://assets/sprites/TennisMathers.webp" id="5_l72w3"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l72w3"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ucygd"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mipys"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8a8k8"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7la6k"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nypq"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bky6r"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4mxc"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5faoh"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_826wr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ptake"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_826wr"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5faoh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4mxc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bky6r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nypq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7la6k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8a8k8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mipys"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ucygd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l72w3"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -42,32 +43,22 @@ position = Vector2(1229, 902.5)
 scale = Vector2(1.17111, 4.64583)
 texture = ExtResource("2_ow34m")
 
-[node name="Titulo" type="Label" parent="."]
-layout_mode = 2
-offset_left = 691.0
-offset_top = 401.0
-offset_right = 1736.0
-offset_bottom = 566.0
-theme_override_font_sizes/font_size = 120
-text = "Tennis Mathers"
-uppercase = true
-
 [node name="Jogar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1053.0
-offset_top = 680.0
-offset_right = 1371.0
-offset_bottom = 833.0
+offset_left = 1051.0
+offset_top = 703.0
+offset_right = 1369.0
+offset_bottom = 856.0
 theme = ExtResource("2_0ykhv")
 theme_override_font_sizes/font_size = 50
 text = "Jogar"
 
 [node name="Ajuda" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1053.0
-offset_top = 880.0
-offset_right = 1371.0
-offset_bottom = 1033.0
+offset_left = 1051.0
+offset_top = 901.0
+offset_right = 1369.0
+offset_bottom = 1054.0
 theme = ExtResource("2_0ykhv")
 theme_override_font_sizes/font_size = 50
 text = "Tutorial"
@@ -75,9 +66,9 @@ text = "Tutorial"
 [node name="Sair" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1053.0
-offset_top = 1080.0
+offset_top = 1099.0
 offset_right = 1371.0
-offset_bottom = 1233.0
+offset_bottom = 1252.0
 theme = ExtResource("2_0ykhv")
 theme_override_font_sizes/font_size = 50
 text = "Sair"
@@ -88,15 +79,20 @@ offset_left = 271.0
 offset_top = 1282.0
 offset_right = 292.0
 offset_bottom = 1295.0
-theme_override_styles/focus = SubResource("StyleBoxTexture_l72w3")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_ucygd")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_mipys")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_8a8k8")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7la6k")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2nypq")
-theme_override_styles/hover = SubResource("StyleBoxTexture_bky6r")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_l4mxc")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_5faoh")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ptake")
 theme_override_styles/normal = SubResource("StyleBoxTexture_826wr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ptake")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5faoh")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_l4mxc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bky6r")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2nypq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7la6k")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_8a8k8")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mipys")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_ucygd")
+theme_override_styles/focus = SubResource("StyleBoxTexture_l72w3")
 script = ExtResource("5_826wr")
+
+[node name="TennisMathers" type="Sprite2D" parent="."]
+position = Vector2(1227, 538.00006)
+scale = Vector2(11.761362, 9.007812)
+texture = ExtResource("5_l72w3")
