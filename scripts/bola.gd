@@ -9,13 +9,13 @@ var correct = AudioJogo.get_node("Correct")
 var wrong = AudioJogo.get_node("Wrong")
 
 var launched = false
-var originX = 965.0
-var originY = 619.0
 
+var origin = Vector2(965.0, 619.0)
+var graph_scale = Vector2(102.0, 50)
 var is_jogador = true
 var score_added := false	
 var function_changed := false
-
+var time_lowered := false
 
 
 func launch() -> void:
@@ -34,14 +34,19 @@ func _physics_process(_delta: float) -> void:
 						$"../../UI/Score".text = str(Global.score)+ " / "+ str(clamp(Global.rodada_atual, 1, 10))
 						
 						label.modulate = Color(0, 1, 0)
-						correct.play()      
+						correct.play()   
+						Global.time += 6 
 						await get_tree().create_timer(0.5).timeout
 						label.modulate = original_color
-				else: 
+						
+				elif !time_lowered: 
+					time_lowered = true
 					label.modulate = Color(1, 0, 0)
-					wrong.play()      
+					wrong.play()     
 					await get_tree().create_timer(0.5).timeout
+					Global.time -= 6
 					label.modulate = original_color
+					
 				if !function_changed:
 					function_changed = true
 					var c_str = ( "+" if c >= 0 else "" ) + str(c)
@@ -51,20 +56,25 @@ func _physics_process(_delta: float) -> void:
 			linear_velocity.x = 0
 			launched = false
 			
+			$".".visible = false
 			
 			# Function
 			Global.function_generator()
 			a = Global.a
 			b = Global.b
 			c = Global.c
-			position = Vector2(originX + (-8)*99.0, ((a/2*pow(-8,2)+b*(-8)+c) * 99.0)*(-1) + originY)
+			position = Vector2(origin.x + (-8) * graph_scale.x, ((a/2*pow(-8,2)+b*(-8)+c) * graph_scale.y)*(-1) + origin.y)
 			
-			#$".".visible = false
 			await get_tree().create_timer(1.0).timeout
-			#$".".visible = true
+			
+			$".".visible = true
 			launched = true
 			is_jogador = false
+			
 		else:
+			$"../../UI/CoefficientB".text = ""
+			$"../../UI/CoefficientC".text = ""
+			time_lowered = false
 			score_added = false
 			function_changed = false
 			
@@ -75,15 +85,16 @@ func _physics_process(_delta: float) -> void:
 
 			$"../../UI/stFunction".text = "y = " + str(a/2) + "x²" + b_str + "x" + c_str
 
-
 			a = 0
 			b = 0
 			c = 0
-			position = Vector2(originX + (-8) * 99.0, originY + (-1)*(99.0 * ((-8)*Global.a+Global.b)))
+			position = Vector2(origin.x + (-8) * graph_scale.x, origin.y + (-1)*(graph_scale.y * ((-8)*Global.a+Global.b)))
 			is_jogador = true
 	
 		
 	if launched:			
-		linear_velocity.x = 300.0
-		var x = (global_position.x - originX) / (99.0)
-		position.y = ((a/2*pow(x,2)+b*x+c) * 99.0)*(-1) + originY
+		linear_velocity.x = 400.0
+		Global.stop_timer = true
+		var x = (global_position.x - origin.x) / (graph_scale.x)
+		position.y = ((a/2*pow(x,2)+b*x+c) * graph_scale.y)*(-1) + origin.y
+	else: Global.stop_timer = false

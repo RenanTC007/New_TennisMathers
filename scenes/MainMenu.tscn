@@ -28,7 +28,7 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l72w3"]
 
-[node name="Node2D" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -249.0
