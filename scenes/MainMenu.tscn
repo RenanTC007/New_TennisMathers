@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://bbfrhtvu4ixvn"]
+[gd_scene load_steps=18 format=3 uid="uid://bbfrhtvu4ixvn"]
 
 [ext_resource type="Script" uid="uid://cvf8v6ra77syx" path="res://scripts/main_menu.gd" id="1_yqorp"]
 [ext_resource type="Theme" uid="uid://ej4cdtehivmc" path="res://assets/theme/default.tres" id="2_0ykhv"]
-[ext_resource type="Texture2D" uid="uid://bh5hfoibnah80" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@3x/Panel/Header@3x.png" id="2_ow34m"]
+[ext_resource type="Texture2D" uid="uid://cekssxw5df22" path="res://assets/sprites/backgrounds/y.png" id="2_826wr"]
+[ext_resource type="FontFile" uid="uid://daebhivthk0hy" path="res://assets/fonts/DigitalDisco.ttf" id="4_826wr"]
 [ext_resource type="Script" uid="uid://b4hcor0i76ios" path="res://scripts/som.gd" id="5_826wr"]
 [ext_resource type="Texture2D" uid="uid://c6vg4tlmc126t" path="res://assets/sprites/TennisMathers.webp" id="5_l72w3"]
 
@@ -37,41 +38,47 @@ offset_right = -249.0
 offset_bottom = -357.0
 script = ExtResource("1_yqorp")
 
-[node name="Fundo" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(1229, 902.5)
-scale = Vector2(1.17111, 4.64583)
-texture = ExtResource("2_ow34m")
+position = Vector2(1260, 807)
+scale = Vector2(3.2274992, 3.2275002)
+texture = ExtResource("2_826wr")
 
 [node name="Jogar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1051.0
-offset_top = 703.0
-offset_right = 1369.0
-offset_bottom = 856.0
+offset_left = 1830.0
+offset_top = 748.0
+offset_right = 2148.0
+offset_bottom = 901.0
 theme = ExtResource("2_0ykhv")
+theme_override_fonts/font = ExtResource("4_826wr")
 theme_override_font_sizes/font_size = 50
 text = "Jogar"
+flat = true
 
-[node name="Ajuda" type="Button" parent="."]
+[node name="Tutorial" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1051.0
-offset_top = 901.0
-offset_right = 1369.0
-offset_bottom = 1054.0
+offset_left = 1834.0
+offset_top = 954.0
+offset_right = 2152.0
+offset_bottom = 1107.0
 theme = ExtResource("2_0ykhv")
+theme_override_fonts/font = ExtResource("4_826wr")
 theme_override_font_sizes/font_size = 50
 text = "Tutorial"
+flat = true
 
 [node name="Sair" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1053.0
-offset_top = 1099.0
-offset_right = 1371.0
-offset_bottom = 1252.0
+offset_left = 1832.0
+offset_top = 1168.0
+offset_right = 2150.0
+offset_bottom = 1321.0
 theme = ExtResource("2_0ykhv")
+theme_override_fonts/font = ExtResource("4_826wr")
 theme_override_font_sizes/font_size = 50
 text = "Sair"
+flat = true
 
 [node name="Som" type="Button" parent="."]
 layout_mode = 0
@@ -93,6 +100,6 @@ theme_override_styles/focus = SubResource("StyleBoxTexture_l72w3")
 script = ExtResource("5_826wr")
 
 [node name="TennisMathers" type="Sprite2D" parent="."]
-position = Vector2(1227, 538.00006)
-scale = Vector2(11.761362, 9.007812)
+position = Vector2(1708.5165, 577.125)
+scale = Vector2(10.817802, 8.285156)
 texture = ExtResource("5_l72w3")

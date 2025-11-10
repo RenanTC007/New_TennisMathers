@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b32f31pix8ir3"]
+[gd_scene load_steps=51 format=3 uid="uid://b32f31pix8ir3"]
 
 [ext_resource type="Script" uid="uid://chyfy2x23dpk" path="res://scripts/main.gd" id="1_trceg"]
 [ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/form.gd" id="2_a8y0u"]
@@ -6,18 +6,25 @@
 [ext_resource type="PackedScene" uid="uid://dh8suwtxc1frp" path="res://scenes/target.tscn" id="4_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="5_muem4"]
 [ext_resource type="PackedScene" uid="uid://dk0dbij27ectd" path="res://scenes/player1.tscn" id="6_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://c8uy6sn3rlo8n" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Levels/Default.png" id="6_yc10j"]
 [ext_resource type="PackedScene" uid="uid://cgnxaq4bqip32" path="res://scenes/bola.tscn" id="7_0ld40"]
 [ext_resource type="Texture2D" uid="uid://xg5aiot2b0p3" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Panel/Window/Big@2x.png" id="8_gqmmt"]
 [ext_resource type="Texture2D" uid="uid://djiyikahwo0kt" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/ProgressBar/Line@2x.png" id="9_yc10j"]
 [ext_resource type="Script" uid="uid://bhdu10tvwq3fu" path="res://scripts/topo.gd" id="10_jscy8"]
+[ext_resource type="Script" uid="uid://dqge3k6pvuptv" path="res://scripts/resume.gd" id="10_pm3ni"]
 [ext_resource type="Texture2D" uid="uid://c17q4jgs7ml2g" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Repeat/Default.png" id="11_eb6dy"]
 [ext_resource type="Script" uid="uid://clkxyl2k2egia" path="res://scripts/avancar.gd" id="12_jbj1t"]
+[ext_resource type="Script" uid="uid://dx2karkshlm64" path="res://textoVitoria.gd" id="12_y6deb"]
 [ext_resource type="Script" uid="uid://dxnstrcdo33lv" path="res://scripts/reiniciar.gd" id="13_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://ddd2du4k367yu" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Play/Default.png" id="13_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://bm8wdhi6ojpqo" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Home/Default.png" id="14_jkv2x"]
 [ext_resource type="Script" uid="uid://d1a62ext3uqbp" path="res://scripts/menu.gd" id="15_jkv2x"]
+[ext_resource type="Script" uid="uid://bq31o53u3p8ia" path="res://scripts/textoDerrota.gd" id="15_og1vs"]
 [ext_resource type="Texture2D" uid="uid://51q603aa2nio" path="res://assets/sprites/fundo azul.webp" id="17_muem4"]
 [ext_resource type="Texture2D" uid="uid://dm340p2yxib7k" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/@previews/Button.png" id="18_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://1pfmaq7a48w6" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Pause/Default.png" id="19_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://bk12e8ksnvpal" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Pause/Hover.png" id="20_yc10j"]
+[ext_resource type="Script" uid="uid://bpm4l437vsr4v" path="res://scripts/pause.gd" id="21_yc10j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3sjr"]
 texture = ExtResource("11_eb6dy")
@@ -25,8 +32,67 @@ texture = ExtResource("11_eb6dy")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trceg"]
 texture = ExtResource("14_jkv2x")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tel4y"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qkpxi"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5q0nq"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgi5k"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j8jky"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kmb1v"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fuf3a"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pibwh"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c6pm6"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5he1u"]
+texture = ExtResource("6_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5poiv"]
+texture = ExtResource("6_yc10j")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_muem4"]
 texture = ExtResource("13_jbj1t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jscy8"]
+texture = ExtResource("19_gqmmt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y6deb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqmmt"]
+texture = ExtResource("20_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_og1vs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pm3ni"]
+texture = ExtResource("20_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2wyq8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yc10j"]
+texture = ExtResource("20_yc10j")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vxglm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2f3dj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yq6so"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fv21b"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_trceg")
@@ -42,14 +108,13 @@ script = ExtResource("2_trceg")
 process_mode = 3
 visible = false
 offset_left = 502.0
-offset_top = 393.0
+offset_top = 217.0
 offset_right = 1437.0
-offset_bottom = 644.0
-metadata/_edit_use_anchors_ = true
+offset_bottom = 796.0
 
 [node name="Big_2x" type="Sprite2D" parent="CanvasLayer/CanvaPause/PainelPause"]
-position = Vector2(461.5, 141.00008)
-scale = Vector2(0.890625, 0.4191174)
+position = Vector2(461.5, 329.5)
+scale = Vector2(0.890625, 0.881127)
 texture = ExtResource("8_gqmmt")
 
 [node name="Line_2x" type="Sprite2D" parent="CanvasLayer/CanvaPause/PainelPause"]
@@ -59,23 +124,32 @@ texture = ExtResource("9_yc10j")
 
 [node name="Topo" type="Label" parent="CanvasLayer/CanvaPause/PainelPause"]
 layout_mode = 0
-offset_left = 85.0
-offset_top = -26.000002
-offset_right = 836.0
-offset_bottom = 197.0
+offset_left = 102.5
+offset_top = -28.0002
+offset_right = 853.5
+offset_bottom = 109.0
 theme_override_font_sizes/font_size = 80
-text = "Pause
-"
+text = "Pause"
 horizontal_alignment = 1
-script = ExtResource("10_jscy8")
-metadata/_edit_use_anchors_ = true
+vertical_alignment = 1
+
+[node name="Texto" type="Label" parent="CanvasLayer/CanvaPause/PainelPause"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 151.0
+offset_right = 787.0
+offset_bottom = 247.0
+theme_override_font_sizes/font_size = 70
+text = "Jogo Pausado"
+horizontal_alignment = 1
 
 [node name="Reiniciar" type="Button" parent="CanvasLayer/CanvaPause/PainelPause"]
 layout_mode = 0
-offset_left = 121.0
-offset_top = 211.0
-offset_right = 390.0
-offset_bottom = 402.0
+offset_left = 9.0
+offset_top = 463.0
+offset_right = 115.0
+offset_bottom = 569.0
+scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_k3sjr")
@@ -88,15 +162,15 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/focus = SubResource("StyleBoxTexture_k3sjr")
 script = ExtResource("13_a8y0u")
-metadata/_edit_use_anchors_ = true
 
 [node name="Menu" type="Button" parent="CanvasLayer/CanvaPause/PainelPause"]
 process_mode = 3
 layout_mode = 0
-offset_left = 563.0
-offset_top = 209.0
-offset_right = 814.0
-offset_bottom = 414.0
+offset_left = 711.0
+offset_top = 461.0
+offset_right = 817.0
+offset_bottom = 567.0
+scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_trceg")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_trceg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_trceg")
@@ -109,7 +183,26 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_trceg")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_trceg")
 theme_override_styles/focus = SubResource("StyleBoxTexture_trceg")
 script = ExtResource("15_jkv2x")
-metadata/_edit_use_anchors_ = true
+
+[node name="Resume" type="Button" parent="CanvasLayer/CanvaPause/PainelPause"]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 463.0
+offset_right = 468.0
+offset_bottom = 569.0
+scale = Vector2(2, 2)
+theme_override_styles/normal = SubResource("StyleBoxTexture_tel4y")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_qkpxi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5q0nq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_dgi5k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j8jky")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_kmb1v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_fuf3a")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_pibwh")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_c6pm6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_5he1u")
+theme_override_styles/focus = SubResource("StyleBoxTexture_5poiv")
+script = ExtResource("10_pm3ni")
 
 [node name="CanvaVitoria" type="CanvasLayer" parent="CanvasLayer"]
 
@@ -140,24 +233,28 @@ offset_bottom = 109.0
 theme_override_font_sizes/font_size = 80
 text = "Rodada x Concluída"
 horizontal_alignment = 1
+vertical_alignment = 1
 script = ExtResource("10_jscy8")
 
 [node name="Texto" type="Label" parent="CanvasLayer/CanvaVitoria/PainelVitoria"]
 layout_mode = 0
-offset_left = 240.0
+offset_left = 88.0
 offset_top = 161.0
-offset_right = 685.0
+offset_right = 848.0
 offset_bottom = 257.0
 theme_override_font_sizes/font_size = 70
-text = "Você Ganhou!"
+text = "Eba!"
 horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("12_y6deb")
 
 [node name="Avancar" type="Button" parent="CanvasLayer/CanvaVitoria/PainelVitoria"]
 layout_mode = 0
 offset_left = 369.0
-offset_top = 501.0
-offset_right = 565.0
-offset_bottom = 680.0
+offset_top = 463.0
+offset_right = 475.0
+offset_bottom = 569.0
+scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_muem4")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_muem4")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_muem4")
@@ -198,26 +295,30 @@ offset_top = -28.0002
 offset_right = 853.5
 offset_bottom = 109.0
 theme_override_font_sizes/font_size = 80
-text = "Rodada x Encerrada"
+text = "Tempo esgotado!"
 horizontal_alignment = 1
-script = ExtResource("10_jscy8")
+vertical_alignment = 1
 
 [node name="Texto" type="Label" parent="CanvasLayer/CanvaDerrota/PainelDerrota"]
 layout_mode = 0
-offset_left = 152.0
+offset_left = 48.0
 offset_top = 151.0
-offset_right = 787.0
+offset_right = 871.0
 offset_bottom = 247.0
 theme_override_font_sizes/font_size = 70
-text = "Você Perdeu!"
+text = "Faltou nas aulas do Kumon?"
 horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("15_og1vs")
 
 [node name="Reiniciar" type="Button" parent="CanvasLayer/CanvaDerrota/PainelDerrota"]
 layout_mode = 0
-offset_left = 121.0
-offset_top = 539.0
-offset_right = 390.0
-offset_bottom = 730.0
+offset_left = 134.0
+offset_top = 463.0
+offset_right = 240.0
+offset_bottom = 569.0
+scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_k3sjr")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_k3sjr")
@@ -234,10 +335,11 @@ script = ExtResource("13_a8y0u")
 [node name="Menu" type="Button" parent="CanvasLayer/CanvaDerrota/PainelDerrota"]
 process_mode = 3
 layout_mode = 0
-offset_left = 563.0
-offset_top = 537.0
-offset_right = 814.0
-offset_bottom = 742.0
+offset_left = 576.0
+offset_top = 463.0
+offset_right = 682.0
+offset_bottom = 569.0
+scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_trceg")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_trceg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_trceg")
@@ -287,36 +389,41 @@ offset_right = 992.0
 offset_bottom = 106.0
 theme_override_font_sizes/font_size = 50
 text = "x +"
+vertical_alignment = 1
 
 [node name="Score" type="Label" parent="UI"]
+z_index = 3
 layout_mode = 0
-offset_left = 1661.0
-offset_top = 96.0
-offset_right = 1921.0
-offset_bottom = 170.0
+offset_left = 1597.0002
+offset_top = 918.0
+offset_right = 1857.0002
+offset_bottom = 992.0
 theme_override_font_sizes/font_size = 50
 text = "Placar"
+vertical_alignment = 1
 
 [node name="Time" type="Label" parent="UI"]
 z_index = 2
 layout_mode = 0
-offset_left = 1731.5
-offset_top = 267.02356
-offset_right = 2027.5
-offset_bottom = 341.02356
+offset_left = 1611.5
+offset_top = 269.02356
+offset_right = 1907.5
+offset_bottom = 343.02356
 theme_override_font_sizes/font_size = 50
 text = "Tempo"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Rodada" type="Label" parent="UI"]
+z_index = 3
 layout_mode = 0
-offset_left = 1588.0
-offset_top = 35.0
-offset_right = 1884.0
-offset_bottom = 109.0
+offset_left = 1596.0002
+offset_top = 857.0
+offset_right = 1892.0002
+offset_bottom = 931.0
 theme_override_font_sizes/font_size = 50
 text = "Rodada"
-horizontal_alignment = 2
-metadata/_edit_use_anchors_ = true
+vertical_alignment = 1
 
 [node name="stFunction" type="Label" parent="UI"]
 z_index = 2
@@ -327,11 +434,12 @@ anchor_top = 7.832
 anchor_right = 42.399
 anchor_bottom = 7.832
 offset_left = -945.2743
-offset_top = -151.87827
+offset_top = -167.87827
 offset_right = -876.2743
-offset_bottom = -82.878265
-theme_override_font_sizes/font_size = 40
+offset_bottom = -98.878265
+theme_override_font_sizes/font_size = 50
 text = "y ="
+vertical_alignment = 1
 
 [node name="ndFunction" type="Label" parent="UI"]
 z_index = 2
@@ -342,11 +450,12 @@ anchor_top = 7.832
 anchor_right = 42.399
 anchor_bottom = 7.832
 offset_left = -945.2743
-offset_top = -95.878265
+offset_top = -79.878265
 offset_right = -864.2743
-offset_bottom = -26.878265
-theme_override_font_sizes/font_size = 40
+offset_bottom = -10.878265
+theme_override_font_sizes/font_size = 50
 text = "y' ="
+vertical_alignment = 1
 
 [node name="Coordinates" type="Control" parent="UI"]
 anchors_preset = 0
@@ -387,8 +496,8 @@ autostart = true
 
 [node name="Button2" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(951.5, 224.70087)
-scale = Vector2(3.2764974, 1.3063716)
+position = Vector2(952.99994, 228.03139)
+scale = Vector2(4.0368667, 1.3821034)
 texture = ExtResource("18_dp3eg")
 region_enabled = true
 region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
@@ -401,9 +510,35 @@ texture = ExtResource("18_dp3eg")
 region_enabled = true
 region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
 
+[node name="Button" type="Sprite2D" parent="Button"]
+z_index = 1
+position = Vector2(-58.30127, 737.7862)
+scale = Vector2(2.270879, 1.3728019)
+texture = ExtResource("18_dp3eg")
+region_enabled = true
+region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
+
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(977, 522)
 scale = Vector2(0.841014, 0.841014)
+
+[node name="Pause" type="Button" parent="."]
+offset_left = 19.0
+offset_top = 17.0
+offset_right = 180.0
+offset_bottom = 178.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_jscy8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_y6deb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gqmmt")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_og1vs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pm3ni")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2wyq8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_yc10j")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_vxglm")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2f3dj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_yq6so")
+theme_override_styles/focus = SubResource("StyleBoxTexture_fv21b")
+script = ExtResource("21_yc10j")
 
 [connection signal="text_submitted" from="UI/CoefficientB" to="UI/CoefficientB" method="_on_text_submitted"]
 [connection signal="text_submitted" from="UI/CoefficientC" to="UI/CoefficientC" method="_on_text_submitted"]

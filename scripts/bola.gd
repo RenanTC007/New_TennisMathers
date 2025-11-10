@@ -43,8 +43,8 @@ func _physics_process(_delta: float) -> void:
 					time_lowered = true
 					label.modulate = Color(1, 0, 0)
 					wrong.play()     
+					Global.time -= 4
 					await get_tree().create_timer(0.5).timeout
-					Global.time -= 6
 					label.modulate = original_color
 					
 				if !function_changed:

@@ -33,6 +33,11 @@ window/stretch/mode="viewport"
 bola=""
 chao=""
 
+[gui]
+
+theme/custom="uid://ej4cdtehivmc"
+theme/custom_font="uid://ej4cdtehivmc"
+
 [input]
 
 mover_esq={
