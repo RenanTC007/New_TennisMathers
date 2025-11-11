@@ -11,6 +11,7 @@ var correct = AudioJogo.get_node("Correct")
 var wrong = AudioJogo.get_node("Wrong")
 
 var launched = false
+var cont = 0
 
 var origin = Vector2(965.0, 619.0)
 var graph_scale = Vector2(102.0, 50)
@@ -44,13 +45,15 @@ func _physics_process(_delta: float) -> void:
 	var label = $"../../UI/ndFunction"
 	var original_color = Color.WHITE
 	if global_position.x >= 1800.0:
+		if cont == 3:
+			get_tree().paused = true
 		if is_jogador:
 			if !Global.primeira_jogada:
 				if Global.a == b and Global.b == c:
 					if !score_added:
 						score_added = true
 						Global.score += 1
-						$"../../UI/Score".text = str(Global.score)+ " / "+ str(clamp(Global.rodada_atual, 1, 10))
+						#$"../../UI/Score".text = str(Global.score)+ " / "+ str(clamp(Global.rodada_atual, 1, 10))
 						
 						label.modulate = Color(0, 1, 0)
 						correct.play()   
@@ -110,6 +113,7 @@ func _physics_process(_delta: float) -> void:
 			c = 0
 			position = Vector2(origin.x + (-8) * graph_scale.x, origin.y + (-1)*(graph_scale.y * ((-8)*Global.a+Global.b)))
 			is_jogador = true
+			cont+=1
 	
 		
 	if launched:			

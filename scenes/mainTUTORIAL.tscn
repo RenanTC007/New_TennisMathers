@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b32f31pix8ir3"]
+[gd_scene load_steps=40 format=3 uid="uid://b32f31pix8ir3"]
 
 [ext_resource type="Script" uid="uid://0ytf418fqggt" path="res://scenes/main_tutorial.gd" id="1_3ojgx"]
 [ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/form.gd" id="2_a8y0u"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://51q603aa2nio" path="res://assets/sprites/fundo azul.webp" id="17_muem4"]
 [ext_resource type="Texture2D" uid="uid://dm340p2yxib7k" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/@previews/Button.png" id="18_dp3eg"]
 [ext_resource type="Script" uid="uid://je7lnmbx0f23" path="res://scenes/avancar_tutorial.gd" id="22_3ojgx"]
+[ext_resource type="Script" uid="uid://bac38y3pnsdun" path="res://scenes/node_2d_2.gd" id="22_m65ep"]
 [ext_resource type="Texture2D" uid="uid://cvxims2v43wu6" path="res://assets/sprites/curve-arrow-upward-icon-on-transparent-background-free-png.webp" id="22_mcuww"]
 [ext_resource type="Texture2D" uid="uid://cmo4cxo6mq8ed" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Play/Hover.png" id="23_m65ep"]
 
@@ -449,6 +450,26 @@ region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
 position = Vector2(977, 522)
 scale = Vector2(0.841014, 0.841014)
 
+[node name="Seta5" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(931.00006, 620)
+scale = Vector2(0.42041573, 0.5108576)
+texture = ExtResource("8_gqmmt")
+
+[node name="Label" type="Label" parent="Seta5"]
+offset_left = -591.39276
+offset_top = -197.01677
+offset_right = 590.60724
+offset_bottom = 340.98322
+theme_override_font_sizes/font_size = 70
+text = "Bom, parece que voce entendeu 
+como o jogo funiciona. 
+
+Vamos tentar praticar?"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="Seta4" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
@@ -492,6 +513,9 @@ valores nos campos dos coeficientes
 a e b pressione enter ↩"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="Node2D2" type="Node2D" parent="."]
+script = ExtResource("22_m65ep")
 
 [node name="AvancarTUTORIAL" type="Button" parent="."]
 process_mode = 2
