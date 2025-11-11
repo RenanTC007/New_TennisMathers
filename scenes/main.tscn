@@ -1,7 +1,7 @@
-[gd_scene load_steps=51 format=3 uid="uid://b32f31pix8ir3"]
+[gd_scene load_steps=52 format=3 uid="uid://b32f31pix8ir3"]
 
 [ext_resource type="Script" uid="uid://chyfy2x23dpk" path="res://scripts/main.gd" id="1_trceg"]
-[ext_resource type="Script" path="res://scripts/form.gd" id="2_a8y0u"]
+[ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/form.gd" id="2_a8y0u"]
 [ext_resource type="Script" uid="uid://dfk3q75enh0id" path="res://scripts/game_manager.gd" id="2_trceg"]
 [ext_resource type="PackedScene" uid="uid://dh8suwtxc1frp" path="res://scenes/target.tscn" id="4_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://dw1h23s22yobx" path="res://scenes/quadra.tscn" id="5_muem4"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://1pfmaq7a48w6" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Pause/Default.png" id="19_gqmmt"]
 [ext_resource type="Texture2D" uid="uid://bk12e8ksnvpal" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Pause/Hover.png" id="20_yc10j"]
 [ext_resource type="Script" uid="uid://bpm4l437vsr4v" path="res://scripts/pause.gd" id="21_yc10j"]
+[ext_resource type="Script" uid="uid://de7hqohk8nh6v" path="res://scenes/control.gd" id="26_2wyq8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3sjr"]
 texture = ExtResource("11_eb6dy")
@@ -406,9 +407,9 @@ vertical_alignment = 1
 z_index = 2
 layout_mode = 0
 offset_left = 1611.5
-offset_top = 269.02356
+offset_top = 106.02356
 offset_right = 1907.5
-offset_bottom = 343.02356
+offset_bottom = 180.02356
 theme_override_font_sizes/font_size = 50
 text = "Tempo"
 horizontal_alignment = 1
@@ -507,22 +508,6 @@ texture = ExtResource("18_dp3eg")
 region_enabled = true
 region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
 
-[node name="Button" type="Sprite2D" parent="."]
-z_index = 1
-position = Vector2(1759.25, 302.51154)
-scale = Vector2(0.841014, 0.841014)
-texture = ExtResource("18_dp3eg")
-region_enabled = true
-region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
-
-[node name="Button" type="Sprite2D" parent="Button"]
-z_index = 1
-position = Vector2(-58.30127, 737.7862)
-scale = Vector2(2.270879, 1.3728019)
-texture = ExtResource("18_dp3eg")
-region_enabled = true
-region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
-
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(977, 522)
 scale = Vector2(0.841014, 0.841014)
@@ -544,6 +529,15 @@ theme_override_styles/disabled = SubResource("StyleBoxTexture_2f3dj")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_yq6so")
 theme_override_styles/focus = SubResource("StyleBoxTexture_fv21b")
 script = ExtResource("21_yc10j")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1701.0
+offset_top = 75.0
+offset_right = 1814.0
+offset_bottom = 188.0
+script = ExtResource("26_2wyq8")
 
 [connection signal="text_submitted" from="UI/CoefficientB" to="UI/CoefficientB" method="_on_text_submitted"]
 [connection signal="text_submitted" from="UI/CoefficientC" to="UI/CoefficientC" method="_on_text_submitted"]
