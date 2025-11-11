@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqhd8aq3ivxg"]
+[gd_scene load_steps=8 format=3 uid="uid://dqhd8aq3ivxg"]
 
 [ext_resource type="Texture2D" uid="uid://cekssxw5df22" path="res://assets/sprites/backgrounds/y.png" id="1_cq4me"]
 [ext_resource type="Texture2D" uid="uid://xg5aiot2b0p3" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Panel/Window/Big@2x.png" id="2_ph3nu"]
 [ext_resource type="Texture2D" uid="uid://djiyikahwo0kt" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/ProgressBar/Line@2x.png" id="3_4kmhl"]
 [ext_resource type="Texture2D" uid="uid://bgj3joj47i36j" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Buttons/Square-Medium/ArrowLeft/Default@2x.png" id="4_4kmhl"]
+[ext_resource type="Texture2D" uid="uid://cmo4cxo6mq8ed" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Play/Hover.png" id="4_6yjpi"]
 [ext_resource type="Script" uid="uid://dg3d8r4el34rg" path="res://scripts/voltar.gd" id="4_cq4me"]
+[ext_resource type="Script" uid="uid://cxvs0h7mnlamc" path="res://scenes/avancar.gd" id="4_gbqnl"]
 
 [node name="Tutorial" type="Node2D"]
 
@@ -23,14 +25,41 @@ position = Vector2(0.499969, -261.135)
 scale = Vector2(1.34251, 3.57143)
 texture = ExtResource("3_4kmhl")
 
+[node name="Label" type="Label" parent="Big_2x"]
+offset_left = -804.4912
+offset_top = -143.06502
+offset_right = 848.28076
+offset_bottom = 268.935
+theme_override_font_sizes/font_size = 60
+text = "O jogo funciona da seguinte maneira:
+ 
+Você controla um jogador de tênis 
+que tem que fazer um saque, para isto 
+você deve derivar uma
+ função apresentada para acertar o 
+saque da maneira correta."
+horizontal_alignment = 1
+
 [node name="Label" type="Label" parent="."]
 offset_left = 750.5
 offset_top = 183.0
 offset_right = 1350.5
 offset_bottom = 320.0
 theme_override_font_sizes/font_size = 80
-text = "Como Jogar?"
+text = "Como Funciona?"
 vertical_alignment = 1
+
+[node name="Avancar" type="Button" parent="."]
+offset_left = 1769.0
+offset_top = 711.0
+offset_right = 1895.0
+offset_bottom = 841.0
+script = ExtResource("4_gbqnl")
+
+[node name="IconeAvancar" type="Sprite2D" parent="Avancar"]
+position = Vector2(58.999878, 74.00006)
+scale = Vector2(1.8789943, 1.8295014)
+texture = ExtResource("4_6yjpi")
 
 [node name="Voltar" type="Button" parent="."]
 offset_left = 81.0
@@ -39,7 +68,7 @@ offset_right = 169.0
 offset_bottom = 149.0
 script = ExtResource("4_cq4me")
 
-[node name="IconeVoltar" type="Sprite2D" parent="."]
-position = Vector2(145.87498, 130.3594)
+[node name="IconeVoltar" type="Sprite2D" parent="Voltar"]
+position = Vector2(64.874985, 75.359406)
 scale = Vector2(0.8764206, 0.9387431)
 texture = ExtResource("4_4kmhl")

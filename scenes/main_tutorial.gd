@@ -5,6 +5,8 @@ extends Node2D
 
 
 func _ready():
+	get_tree().paused = true 	
+
 
 	var bola = $Entity/Bola
 	

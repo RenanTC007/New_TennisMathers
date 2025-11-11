@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+@onready var trail = get_parent().get_node("Trail")
+
 # Coeficientes da função quadrática
 @export var a: float = 0
 @export var b: float = 0
@@ -17,11 +19,28 @@ var score_added := false
 var function_changed := false
 var time_lowered := false
 
+func _ready():
+	trail.width = 3
+	trail.clear_points()
 
 func launch() -> void:
 	launched = true
+	trail.clear_points()
 
 func _physics_process(_delta: float) -> void:
+	#Rastro da bola
+	var local_point = trail.to_local(global_position)
+	var ultimo = trail.points.size() - 1
+
+	if trail.points.size() > 0:
+		if trail.points.size() == 1:
+			trail.points[0].x = 149
+		if trail.points[ultimo].x < local_point.x: 
+			trail.add_point(local_point)
+	else:
+		print("Porra")
+		trail.add_point(local_point)
+		
 	var label = $"../../UI/ndFunction"
 	var original_color = Color.WHITE
 	if global_position.x >= 1800.0:
@@ -70,6 +89,7 @@ func _physics_process(_delta: float) -> void:
 			$".".visible = true
 			launched = true
 			is_jogador = false
+			trail.clear_points()
 			
 		else:
 			$"../../UI/CoefficientB".text = ""

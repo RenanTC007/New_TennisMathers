@@ -1,8 +1,13 @@
 extends LineEdit
 
+var b_vlw = false
+var c_vlw = false
+
 @export var variable_name: String   # Nome da variável a ser alterada
 @onready var bola = get_node("../../Entity/Bola")
 
+func _ready() -> void:
+	print()
 
 func _on_text_submitted(new_text: String):
 	if not bola.launched:
@@ -11,8 +16,11 @@ func _on_text_submitted(new_text: String):
 
 		elif (variable_name == "CoefficientB"):
 			bola.b = float(new_text)
+			b_vlw = true
+			
 
 		elif (variable_name == "CoefficientC"):
 			bola.c = float(new_text)
+			c_vlw = true
 			
 	release_focus()
