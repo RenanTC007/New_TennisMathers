@@ -272,6 +272,7 @@ script = ExtResource("12_jbj1t")
 
 [node name="PainelDerrota" type="Panel" parent="CanvasLayer/CanvaDerrota"]
 process_mode = 3
+visible = false
 offset_left = 502.0
 offset_top = 217.0
 offset_right = 1437.0
