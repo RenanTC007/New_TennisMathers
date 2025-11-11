@@ -40,45 +40,48 @@ script = ExtResource("1_yqorp")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(1260, 807)
+position = Vector2(1260, 783)
 scale = Vector2(3.2274992, 3.2275002)
 texture = ExtResource("2_826wr")
 
 [node name="Jogar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1830.0
-offset_top = 748.0
-offset_right = 2148.0
-offset_bottom = 901.0
+offset_left = 1774.0
+offset_top = 764.0
+offset_right = 2092.0
+offset_bottom = 917.0
 theme = ExtResource("2_0ykhv")
 theme_override_fonts/font = ExtResource("4_826wr")
 theme_override_font_sizes/font_size = 50
 text = "Jogar"
 flat = true
+alignment = 2
 
 [node name="Tutorial" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1834.0
-offset_top = 954.0
-offset_right = 2152.0
-offset_bottom = 1107.0
+offset_left = 1778.0
+offset_top = 906.0
+offset_right = 2096.0
+offset_bottom = 1059.0
 theme = ExtResource("2_0ykhv")
 theme_override_fonts/font = ExtResource("4_826wr")
 theme_override_font_sizes/font_size = 50
 text = "Tutorial"
 flat = true
+alignment = 2
 
 [node name="Sair" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1832.0
-offset_top = 1168.0
-offset_right = 2150.0
-offset_bottom = 1321.0
+offset_left = 1776.0
+offset_top = 1048.0
+offset_right = 2094.0
+offset_bottom = 1201.0
 theme = ExtResource("2_0ykhv")
 theme_override_fonts/font = ExtResource("4_826wr")
 theme_override_font_sizes/font_size = 50
 text = "Sair"
 flat = true
+alignment = 2
 
 [node name="Som" type="Button" parent="."]
 layout_mode = 0

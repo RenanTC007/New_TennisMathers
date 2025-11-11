@@ -4,7 +4,7 @@ func _ready() -> void:
 	var rng = RandomNumberGenerator.new()
 	var frases_negativas = [
 		"Faltou nas aulas do Kumon?",
-		"Esqueceu disso? +c",
+		"Esqueceu disso -> +c",
 		"Aprisionado pelas correntes da regra da cadeia!",
 		"Tendeu a zero...",
 		"Melhor voltar para o Johnrney!",

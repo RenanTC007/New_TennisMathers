@@ -272,7 +272,6 @@ script = ExtResource("12_jbj1t")
 
 [node name="PainelDerrota" type="Panel" parent="CanvasLayer/CanvaDerrota"]
 process_mode = 3
-visible = false
 offset_left = 502.0
 offset_top = 217.0
 offset_right = 1437.0
@@ -496,8 +495,8 @@ autostart = true
 
 [node name="Button2" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(952.99994, 228.03139)
-scale = Vector2(4.0368667, 1.3821034)
+position = Vector2(952.4999, 228.03139)
+scale = Vector2(4.2626734, 1.3821034)
 texture = ExtResource("18_dp3eg")
 region_enabled = true
 region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
