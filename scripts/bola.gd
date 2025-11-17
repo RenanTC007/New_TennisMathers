@@ -39,7 +39,6 @@ func _physics_process(_delta: float) -> void:
 		if trail.points[ultimo].x < local_point.x: 
 			trail.add_point(local_point)
 	else:
-		print("Porra")
 		trail.add_point(local_point)
 		
 	var label = $"../../UI/ndFunction"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b32f31pix8ir3"]
+[gd_scene load_steps=45 format=3 uid="uid://dbi68b51vlky"]
 
 [ext_resource type="Script" uid="uid://0ytf418fqggt" path="res://scenes/main_tutorial.gd" id="1_3ojgx"]
 [ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/form.gd" id="2_a8y0u"]
@@ -67,6 +67,16 @@ texture = ExtResource("6_yc10j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_muem4"]
 texture = ExtResource("13_jbj1t")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m65ep"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fgicv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yvrfc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8bvqo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qnrs3"]
 
 [node name="MainTutorial" type="Node2D"]
 script = ExtResource("1_3ojgx")
@@ -523,6 +533,11 @@ offset_left = 1604.9113
 offset_top = 906.4562
 offset_right = 1730.9113
 offset_bottom = 1036.4562
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m65ep")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fgicv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yvrfc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8bvqo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qnrs3")
 script = ExtResource("22_3ojgx")
 
 [node name="IconeAvancar" type="Sprite2D" parent="AvancarTUTORIAL"]
