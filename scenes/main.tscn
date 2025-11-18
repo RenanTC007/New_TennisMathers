@@ -508,6 +508,14 @@ texture = ExtResource("18_dp3eg")
 region_enabled = true
 region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
 
+[node name="Button2" type="Sprite2D" parent="Button2"]
+z_index = 1
+position = Vector2(176.07835, 502.47205)
+scale = Vector2(0.43877953, 0.80575526)
+texture = ExtResource("18_dp3eg")
+region_enabled = true
+region_rect = Rect2(279.949, 474.168, 217.493, 220.947)
+
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(977, 522)
 scale = Vector2(0.841014, 0.841014)

@@ -5,7 +5,6 @@ extends Node2D
 
 
 func _ready():
-
 	var bola = $Entity/Bola
 	
 	# cria 2 cópias do nó Target

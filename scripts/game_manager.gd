@@ -20,12 +20,12 @@ func _ready() -> void:
 
 	
 	#Pontuação
-	$"../UI/Score".text = "0 / "+ str(clamp(Global.rodada_atual, 1, 10))
+	$"../UI/Score".text = "0 / " + str(clamp(Global.rodada_atual, 1, 10))
 	
 
 
 func _process(_delta: float) -> void:
-	if Global.score == clamp(Global.rodada_atual, 1, 10):
+	if Global.score == Global.rodada_atual:
 		await get_tree().create_timer(1.0).timeout
 		mostrar_popup_vitoria()
 	if Global.time < 0:

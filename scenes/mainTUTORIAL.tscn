@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dbi68b51vlky"]
+[gd_scene load_steps=46 format=3 uid="uid://dbi68b51vlky"]
 
 [ext_resource type="Script" uid="uid://0ytf418fqggt" path="res://scenes/main_tutorial.gd" id="1_3ojgx"]
 [ext_resource type="Script" uid="uid://dqos64vbv28ql" path="res://scripts/form.gd" id="2_a8y0u"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://bq31o53u3p8ia" path="res://scripts/textoDerrota.gd" id="15_og1vs"]
 [ext_resource type="Texture2D" uid="uid://51q603aa2nio" path="res://assets/sprites/fundo azul.webp" id="17_muem4"]
 [ext_resource type="Texture2D" uid="uid://dm340p2yxib7k" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/@previews/Button.png" id="18_dp3eg"]
+[ext_resource type="Script" uid="uid://dru3jtahdira1" path="res://scripts/bolaTutorial.gd" id="20_fgicv"]
 [ext_resource type="Script" uid="uid://je7lnmbx0f23" path="res://scenes/avancar_tutorial.gd" id="22_3ojgx"]
 [ext_resource type="Script" uid="uid://bac38y3pnsdun" path="res://scenes/node_2d_2.gd" id="22_m65ep"]
 [ext_resource type="Texture2D" uid="uid://cvxims2v43wu6" path="res://assets/sprites/curve-arrow-upward-icon-on-transparent-background-free-png.webp" id="22_mcuww"]
@@ -434,6 +435,7 @@ scale = Vector2(2, 2)
 position = Vector2(965, 619)
 collision_layer = 4
 collision_mask = 33
+script = ExtResource("20_fgicv")
 
 [node name="Target" parent="Entity" instance=ExtResource("4_jbj1t")]
 z_index = 1
