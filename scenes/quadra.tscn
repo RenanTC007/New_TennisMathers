@@ -28,7 +28,7 @@ texture = ExtResource("1_u43qq")
 [node name="paredeEsquerda" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="paredeEsquerda"]
-position = Vector2(22, 238)
+position = Vector2(5, 238)
 shape = SubResource("WorldBoundaryShape2D_iuonw")
 
 [node name="paredeDireita" type="StaticBody2D" parent="."]

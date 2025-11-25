@@ -51,12 +51,12 @@ func _physics_process(_delta: float) -> void:
 				if Global.a == b and Global.b == c:
 					if !score_added:
 						score_added = true
-						Global.score += 1
+						#Global.score += 1
 						#$"../../UI/Score".text = str(Global.score)+ " / "+ str(clamp(Global.rodada_atual, 1, 10))
 						
 						label.modulate = Color(0, 1, 0)
 						correct.play()   
-						Global.time += 6 
+						#Global.time += 6 
 						await get_tree().create_timer(0.5).timeout
 						label.modulate = original_color
 						
@@ -64,7 +64,7 @@ func _physics_process(_delta: float) -> void:
 					time_lowered = true
 					label.modulate = Color(1, 0, 0)
 					wrong.play()     
-					Global.time -= 4
+					#Global.time -= 4
 					await get_tree().create_timer(0.5).timeout
 					label.modulate = original_color
 					

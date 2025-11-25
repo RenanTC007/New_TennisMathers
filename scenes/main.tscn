@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c8uy6sn3rlo8n" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Levels/Default.png" id="6_yc10j"]
 [ext_resource type="PackedScene" uid="uid://cgnxaq4bqip32" path="res://scenes/bola.tscn" id="7_0ld40"]
 [ext_resource type="Texture2D" uid="uid://xg5aiot2b0p3" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Panel/Window/Big@2x.png" id="8_gqmmt"]
+[ext_resource type="Texture2D" uid="uid://cn23f3fubgcxj" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/ArrowRight/Default.png" id="9_2wyq8"]
 [ext_resource type="Texture2D" uid="uid://djiyikahwo0kt" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/ProgressBar/Line@2x.png" id="9_yc10j"]
 [ext_resource type="Script" uid="uid://bhdu10tvwq3fu" path="res://scripts/topo.gd" id="10_jscy8"]
 [ext_resource type="Script" uid="uid://dqge3k6pvuptv" path="res://scripts/resume.gd" id="10_pm3ni"]
@@ -17,7 +18,6 @@
 [ext_resource type="Script" uid="uid://dx2karkshlm64" path="res://textoVitoria.gd" id="12_y6deb"]
 [ext_resource type="Script" uid="uid://dxnstrcdo33lv" path="res://scripts/reiniciar.gd" id="13_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://ddd2du4k367yu" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Play/Default.png" id="13_jbj1t"]
-[ext_resource type="Texture2D" uid="uid://bm8wdhi6ojpqo" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Home/Default.png" id="14_jkv2x"]
 [ext_resource type="Script" uid="uid://d1a62ext3uqbp" path="res://scripts/menu.gd" id="15_jkv2x"]
 [ext_resource type="Script" uid="uid://bq31o53u3p8ia" path="res://scripts/textoDerrota.gd" id="15_og1vs"]
 [ext_resource type="Texture2D" uid="uid://51q603aa2nio" path="res://assets/sprites/fundo azul.webp" id="17_muem4"]
@@ -25,46 +25,46 @@
 [ext_resource type="Texture2D" uid="uid://1pfmaq7a48w6" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Pause/Default.png" id="19_gqmmt"]
 [ext_resource type="Texture2D" uid="uid://bk12e8ksnvpal" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Pause/Hover.png" id="20_yc10j"]
 [ext_resource type="Script" uid="uid://bpm4l437vsr4v" path="res://scripts/pause.gd" id="21_yc10j"]
-[ext_resource type="Script" uid="uid://de7hqohk8nh6v" path="res://scenes/control.gd" id="26_2wyq8"]
+[ext_resource type="Script" uid="uid://de7hqohk8nh6v" path="res://scripts/control.gd" id="26_2wyq8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3sjr"]
 texture = ExtResource("11_eb6dy")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trceg"]
-texture = ExtResource("14_jkv2x")
+texture = ExtResource("6_yc10j")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tel4y"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qkpxi"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5q0nq"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgi5k"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j8jky"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kmb1v"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fuf3a"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pibwh"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c6pm6"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5he1u"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5poiv"]
-texture = ExtResource("6_yc10j")
+texture = ExtResource("9_2wyq8")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_muem4"]
 texture = ExtResource("13_jbj1t")
@@ -146,9 +146,9 @@ horizontal_alignment = 1
 
 [node name="Reiniciar" type="Button" parent="CanvasLayer/CanvaPause/PainelPause"]
 layout_mode = 0
-offset_left = 9.0
+offset_left = 362.0
 offset_top = 463.0
-offset_right = 115.0
+offset_right = 468.0
 offset_bottom = 569.0
 scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_k3sjr")
@@ -167,10 +167,10 @@ script = ExtResource("13_a8y0u")
 [node name="Menu" type="Button" parent="CanvasLayer/CanvaPause/PainelPause"]
 process_mode = 3
 layout_mode = 0
-offset_left = 711.0
-offset_top = 461.0
-offset_right = 817.0
-offset_bottom = 567.0
+offset_left = 9.0
+offset_top = 463.0
+offset_right = 115.0
+offset_bottom = 569.0
 scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_trceg")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_trceg")
@@ -187,9 +187,9 @@ script = ExtResource("15_jkv2x")
 
 [node name="Resume" type="Button" parent="CanvasLayer/CanvaPause/PainelPause"]
 layout_mode = 0
-offset_left = 362.0
+offset_left = 711.0
 offset_top = 463.0
-offset_right = 468.0
+offset_right = 817.0
 offset_bottom = 569.0
 scale = Vector2(2, 2)
 theme_override_styles/normal = SubResource("StyleBoxTexture_tel4y")
@@ -479,8 +479,8 @@ scale = Vector2(0.827732, 2.14322)
 [node name="Entity" type="Node2D" parent="."]
 
 [node name="Jogador" parent="Entity" instance=ExtResource("6_dp3eg")]
-position = Vector2(5, -715)
-scale = Vector2(2, 2)
+position = Vector2(0, -715)
+scale = Vector2(2.5, 2.5)
 
 [node name="Bola" parent="Entity" instance=ExtResource("7_0ld40")]
 position = Vector2(965, 619)

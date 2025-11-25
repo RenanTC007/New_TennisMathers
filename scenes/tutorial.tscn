@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bgj3joj47i36j" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png@2x/Buttons/Square-Medium/ArrowLeft/Default@2x.png" id="4_4kmhl"]
 [ext_resource type="Texture2D" uid="uid://cmo4cxo6mq8ed" path="res://assets/sprites/Prinbles_GUI_Asset_Silent (1.0.0)/asset/png/Buttons/Square-Medium/Play/Hover.png" id="4_6yjpi"]
 [ext_resource type="Script" uid="uid://dg3d8r4el34rg" path="res://scripts/voltar.gd" id="4_cq4me"]
-[ext_resource type="Script" uid="uid://cxvs0h7mnlamc" path="res://scenes/avancar.gd" id="4_gbqnl"]
+[ext_resource type="Script" uid="uid://cxvs0h7mnlamc" path="res://scripts/avancar_tutorial.gd" id="4_gbqnl"]
 
 [node name="Tutorial" type="Node2D"]
 
